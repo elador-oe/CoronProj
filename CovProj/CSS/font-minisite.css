@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+
+@font-face {
+    font-family: "minisite-font-36";
+    src: url("/Fonts/font-minisite/fonts/minisite-font-36.eot?nwxlyh");
+    src: url("/Fonts/font-minisite/fonts/minisite-font-36.eot?nwxlyh#iefix") format("embedded-opentype"),
+        url("/Fonts/font-minisite/fonts/minisite-font-36.woff?nwxlyh") format("woff"),
+        url("/Fonts/font-minisite/fonts/minisite-font-36.ttf?nwxlyh") format("truetype"),
+        url("/Fonts/font-minisite/fonts/minisite-font-36.svg?nwxlyh#minisite-font-36") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[data-icon]:before {
+    font-family: "minisite-font-36";
+    content: attr(data-icon);
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-minisite-"]:before,
+[class*=" icon-minisite-"]:before {
+    font-family: "minisite-font-36" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-minisite-arrow:before {
+    content: "\e900";
+}
+.icon-minisite-close:before {
+    content: "\e901";
+}
+.icon-minisite-close-quest-01:before {
+    content: "\e902";
+}
+.icon-minisite-eco-nrj:before {
+    content: "\e903";
+}
+.icon-minisite-handicap:before {
+    content: "\e904";
+}
+.icon-minisite-heart:before {
+    content: "\e905";
+}
+.icon-minisite-lung:before {
+    content: "\e906";
+}
+.icon-minisite-mail:before {
+    content: "\e908";
+}
+.icon-minisite-message:before {
+    content: "\e909";
+}
+.icon-minisite-name:before {
+    content: "\e90a";
+}
+.icon-minisite-nature-protect:before {
+    content: "\e90b";
+}
+.icon-minisite-open-quest:before {
+    content: "\e90c";
+}
+.icon-minisite-parking:before {
+    content: "\e90d";
+}
+.icon-minisite-phone:before {
+    content: "\e90e";
+}
+.icon-minisite-position:before {
+    content: "\e90f";
+}
+.icon-minisite-project-screen:before {
+    content: "\e910";
+}
+.icon-minisite-project-graph:before {
+    content: "\e911";
+}
+.icon-minisite-project-screen2:before {
+    content: "\e912";
+}
+.icon-minisite-project-mobile:before {
+    content: "\e913";
+}
+.icon-minisite-project-light:before {
+    content: "\e914";
+}
+.icon-minisite-project-thumbs-up:before {
+    content: "\e915";
+}
+.icon-minisite-share:before {
+    content: "\e916";
+}
+.icon-minisite-world:before {
+    content: "\e917";
+}
+.icon-minisite-phone-fix:before {
+    content: "\e918";
+}
+.icon-minisite-birthday-01:before {
+    content: "\e919";
+}
+.icon-minisite-fax-01:before {
+    content: "\e91a";
+}
+.icon-minisite-mail-sign-01:before {
+    content: "\e91b";
+}
+.icon-minisite-certificate:before {
+    content: "\e91c";
+}
+.icon-minisite-badge:before {
+    content: "\e91d";
+}
+.icon-minisite-jugement-01:before {
+    content: "\e91e";
+}
+.icon-minisite-globe-01:before {
+    content: "\e91f";
+}
+.icon-minisite-info-01:before {
+    content: "\e920";
+}
+.icon-minisite-security-01:before {
+    content: "\e921";
+}
+.icon-minisite-feedback-01:before {
+    content: "\e922";
+}
+.icon-minisite-legal-services-01:before {
+    content: "\e923";
+}
+.icon-minisite-passport-01:before {
+    content: "\e924";
+}
+.icon-minisite-icon-visa-01:before {
+    content: "\e925";
+}
+.icon-minisite-appointement-01:before {
+    content: "\e926";
+}
+.icon-minisite-icon-visa:before {
+    content: "\e927";
+}
+.icon-minisite-place-01:before {
+    content: "\e928";
+}
+.icon-minisite-waze-01:before {
+    content: "\e929";
+}
+.icon-minisite-mobile-phone-01:before {
+    content: "\e92a";
+}
+.icon-minisite-user-01:before {
+    content: "\e92b";
+}
+.icon-minisite-diploma-01:before {
+    content: "\e92c";
+}

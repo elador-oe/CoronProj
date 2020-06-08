@@ -1,0 +1,198 @@
+/* Fonts */
+/*2rem = 32px*/
+/* 3rem = 48px */
+/* 1.5rem = 24px */
+/* 1.75rem = 28px */
+/* 2.25rem = 36px */
+/*1.25rem = 20px*/
+/* 1rem = 16px */
+/* 1.125rem = 18px */
+/* 1.5rem = 24px */
+/* 1rem = 16px */
+/* 4.25rem = 68px */
+/* 2.25rem = 36px */
+/* 0.75rem = 12px  */
+/* 0.6rem = 9.6px  */
+/* 3.5rem = 56px */
+/* 3.75rem = 60px */
+/* 0.875rem = 14px */
+@font-face {
+  font-family: "Arimo-Regular";
+  src: url("../../Fonts/font-minisite/css/Arimo-Regular_0.ttf") format("truetype"); }
+
+.arimo {
+  font-family: Arimo-Regular; }
+
+/* End Fonts */
+/* Variables */
+/* End Variables */
+.bgcolor-dark {
+  background-color: #f4f3f2; }
+
+.moveLeft {
+  position: relative;
+  -webkit-animation: mymove;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s;
+  /* Safari 4.0 - 8.0 */
+  animation: move_left;
+  animation-duration: 1s; }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes move_left {
+  from {
+    right: 0px; }
+  to {
+    right: 3px; } }
+
+@keyframes move_left {
+  from {
+    right: 0px; }
+  to {
+    right: 3px; } }
+
+.moveRight {
+  position: relative;
+  -webkit-animation: mymove;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s;
+  /* Safari 4.0 - 8.0 */
+  animation: move_right;
+  animation-duration: 1s; }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes move_right {
+  from {
+    left: 0px; }
+  to {
+    left: 3px; } }
+
+@keyframes move_right {
+  from {
+    left: 0px; }
+  to {
+    left: 3px; } }
+
+body {
+  position: relative;
+  color: #333333; }
+  body .txt-invisible {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0; }
+  body .txt-invisible-full-width {
+    font-size: 1px !important;
+    color: transparent !important;
+    float: right; }
+  body .white-txt {
+    color: #ffffff; }
+  body a.white-txt:hover, body a.white-txt:focus {
+    color: #ffffff; }
+  body .regular-txt {
+    color: #333333; }
+  body a.regular-txt:hover, body a.regular-txt:focus {
+    color: #333333; }
+  body .fa-1-75x {
+    font-size: 1.75em;
+    line-height: 1.2em; }
+  body .title-txt {
+    font-size: 3rem; }
+  body .sub-title-txt {
+    font-size: 1.5rem; }
+  body .link-txt {
+    font-size: 1.25rem; }
+  body .content-txt {
+    font-size: 1rem; }
+  body .content-large-txt {
+    font-size: 1.5rem; }
+  body .dsc-txt {
+    font-size: 1rem; }
+  body hr {
+    border-width: 1px 20px;
+    width: 30%;
+    border-top: 1px #3b3b3b solid; }
+  body button {
+    box-shadow: unset;
+    font-family: Arimo-Regular; }
+    body button:focus {
+      outline: #007bff auto 2px; }
+  body button.focus--mouse {
+    outline: none; }
+  body .mst-btn {
+    width: 160px;
+    min-height: 44px;
+    color: #ffffff; }
+  body .mst-btn-wide {
+    width: 265px; }
+  body .btn-outline-primary:not(:disabled):not(.disabled).active, body .btn-outline-primary:not(:disabled):not(.disabled):active {
+    background-color: transparent; }
+  body .show > .btn-outline-primary.dropdown-toggle {
+    background-color: transparent; }
+  body .mst-btn.btn-outline-primary {
+    background-color: transparent;
+    background-image: none;
+    background-color: none; }
+  body .mst-btn[aria-expanded="true"] b {
+    display: none; }
+  body .mst-btn[aria-expanded="true"] span {
+    display: inline; }
+  body .mst-btn[aria-expanded="false"] b {
+    display: inline; }
+  body .mst-btn[aria-expanded="false"] span {
+    display: none; }
+  body input, body textarea {
+    font-family: Arimo-Regular;
+    color: #333333;
+    font-size: 1.25rem; }
+  body .mst-btn-round {
+    border-radius: 24px;
+    width: 200px; }
+  body .mst-clear-both {
+    clear: both; }
+
+/* Small devices (landscape phones, 576px and up)  */
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .w-md-20 {
+    width: 20% !important; }
+  .w-md-75 {
+    width: 75% !important; } }
+
+/* Large devices (desktops, 992px and up) */
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes move_left {
+    from {
+      right: 0px; }
+    to {
+      right: 30px; } }
+  @keyframes move_left {
+    from {
+      right: 0px; }
+    to {
+      right: 30px; } }
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes move_right {
+    from {
+      left: 0px; }
+    to {
+      left: 30px; } }
+  @keyframes move_right {
+    from {
+      left: 0px; }
+    to {
+      left: 30px; } }
+  body h1, body .h1 {
+    font-size: 3.5rem; }
+  body h2, body .h2 {
+    font-size: 3rem; }
+  body h3, body .h3 {
+    font-size: 2.25rem; }
+  body hr {
+    width: 10%; }
+  body .title-dsc {
+    font-size: 2rem; } }

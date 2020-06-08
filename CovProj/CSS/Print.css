@@ -1,0 +1,34 @@
+@page {
+  /* this affects the margin in the printer settings */
+  margin: 25mm 25mm 25mm 25mm; }
+
+@media print {
+  * {
+    -webkit-transition: none !important;
+    transition: none !important; }
+  a {
+    color: #000;
+    word-wrap: break-word; }
+  .bg-dark {
+    background-color: transparent !important; }
+  .white-txt, .pallete-color {
+    color: #3b3b3b !important; }
+  a[href]:not([href*="#"]):after {
+    content: " (" attr(href) ")"; }
+  .mst-top-line, .mst-top-line.scrolled {
+    background-color: transparent !important; }
+  .mst-QA {
+    background-color: transparent;
+    break-before: page; }
+    .mst-QA .card button.collapsed {
+      color: #3b3b3b; }
+    .mst-QA .plus-minus-toggle:before, .mst-QA .plus-minus-toggle:after {
+      background-color: #3b3b3b; }
+  .mst-print-card-carousel,
+  .mst-print-collapse-carousel {
+    text-align: right; }
+    .mst-print-card-carousel ul,
+    .mst-print-collapse-carousel ul {
+      list-style: none; }
+  .mst-map {
+    break-before: page; } }
