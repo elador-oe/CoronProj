@@ -8,7 +8,8 @@ namespace CovProj.Models
 {
     public class Peoples
     {
-        public int PeoplesID { get; set; }
+        [Key]
+        public int PeoplesId { get; set; }
 
         [Required(ErrorMessage = "First name is requried")]
         [Display(Name = "First name")]

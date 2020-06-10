@@ -6,7 +6,7 @@ using System.Web;
 
 namespace CovProj.Models
 {
-    public class CovidDBContext
+    public class CovidDBContext : DbContext
     {
         public DbSet<Peoples> peoples { get; set; }
         public DbSet<Healty> healties { get; set; }

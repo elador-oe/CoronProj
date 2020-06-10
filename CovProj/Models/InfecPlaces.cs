@@ -8,7 +8,8 @@ namespace CovProj.Models
 {
     public class InfecPlaces
     {
-        public int PlaceID { get; set; }
+        [Key]
+        public int PlaceId { get; set; }
 
         [Required(ErrorMessage = "City is requried")]
         [Display(Name = "Visited cities")]

@@ -1,0 +1,127 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Linq;
+using System.Net;
+using System.Web;
+using System.Web.Mvc;
+using CovProj.Models;
+
+namespace CovProj.Controllers
+{
+    public class PeoplesController : Controller
+    {
+        private CovidDBContext db = new CovidDBContext();
+
+        // GET: Peoples
+        public ActionResult Index()
+        {
+            return View(db.peoples.ToList());
+        }
+
+        // GET: Peoples/Details/5
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Peoples peoples = db.peoples.Find(id);
+            if (peoples == null)
+            {
+                return HttpNotFound();
+            }
+            return View(peoples);
+        }
+
+        // GET: Peoples/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Peoples/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "PeoplesId,FirstName,LastName,Identification,Password,PhoneNumber,Address,Email,City,Diagnosed,BirthDate,IsAdmin")] Peoples peoples)
+        {
+            if (ModelState.IsValid)
+            {
+                db.peoples.Add(peoples);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(peoples);
+        }
+
+        // GET: Peoples/Edit/5
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Peoples peoples = db.peoples.Find(id);
+            if (peoples == null)
+            {
+                return HttpNotFound();
+            }
+            return View(peoples);
+        }
+
+        // POST: Peoples/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "PeoplesId,FirstName,LastName,Identification,Password,PhoneNumber,Address,Email,City,Diagnosed,BirthDate,IsAdmin")] Peoples peoples)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(peoples).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(peoples);
+        }
+
+        // GET: Peoples/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Peoples peoples = db.peoples.Find(id);
+            if (peoples == null)
+            {
+                return HttpNotFound();
+            }
+            return View(peoples);
+        }
+
+        // POST: Peoples/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Peoples peoples = db.peoples.Find(id);
+            db.peoples.Remove(peoples);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+    }
+}

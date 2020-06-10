@@ -76,7 +76,6 @@ C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CovProj\CovProj\obj
 C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CovProj\CovProj\obj\Debug\CovProj.csproj.CopyComplete
 C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CovProj\CovProj\obj\Debug\CovProj.dll
 C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CovProj\CovProj\obj\Debug\CovProj.pdb
-C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CovProj\CovProj\obj\Debug\CovProj.csprojAssemblyReference.cache
 C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CovProj\CovProj\bin\EntityFramework.dll
 C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CovProj\CovProj\bin\EntityFramework.SqlServer.dll
 C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CovProj\CovProj\bin\EntityFramework.xml

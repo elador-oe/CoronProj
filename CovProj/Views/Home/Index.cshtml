@@ -1,21 +1,31 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-    <html>
-    <title>W3.CSS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <html>
+    <head>
+        <title>W3.CSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+
+        .bg { /* The image used */ background-image: url(woman-in-white.jpg); /* Full height */ height: 100%; /* Center and scale the image nicely */ background-position: center; background-repeat: no-repeat; background-size: cover; }
+        </style>
+    </head>
     <body>
         <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="nav-left" id="mySidebar">
             <button class="w3-bar-item w3-button w3-large"
                     onclick="w3_close()">
                 Close &times;
             </button>
-            <a href="#" class="w3-bar-item w3-button">Map</a>
+            <a href="NavigationPagrs/map" class="w3-bar-item w3-button">Map</a>
             <a href="#" class="w3-bar-item w3-button">Statistics</a>
             <a href="#" class="w3-bar-item w3-button">home isolation report for international travelers</a>
-            <a href="#" class="w3-bar-item w3-button">home isolation report after contact</a>
-            <a href="#" class="w3-bar-item w3-button">report a violation</a>
+            <a href="/Isolateds/Index" class="w3-bar-item w3-button">home isolation report after contact</a>
+            <a href="/Recoverings/Index" class="w3-bar-item w3-button">report recovery</a>
             <a href="#" class="w3-bar-item w3-button">public information</a>
         </div>
 
@@ -43,6 +53,7 @@
             }
         </script>
 </body>
+
     </html>
 
 

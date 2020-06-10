@@ -127,7 +127,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HealtiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InfecPlacesController.cs" />
+    <Compile Include="Controllers\IsolatedsController.cs" />
+    <Compile Include="Controllers\PeoplesController.cs" />
+    <Compile Include="Controllers\RecoveringsController.cs" />
+    <Compile Include="Controllers\SicksController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -149,6 +155,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="media\corona_320x195.jpg" />
+    <Content Include="media\corona_small.jpg" />
+    <Content Include="media\woman-in-white.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -173,12 +182,44 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Public information.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\NavigationPagrs\map.cshtml" />
+    <Content Include="Views\Peoples\Create.cshtml" />
+    <Content Include="Views\Peoples\Delete.cshtml" />
+    <Content Include="Views\Peoples\Details.cshtml" />
+    <Content Include="Views\Peoples\Edit.cshtml" />
+    <Content Include="Views\Peoples\Index.cshtml" />
+    <Content Include="Views\Healties\Create.cshtml" />
+    <Content Include="Views\Healties\Delete.cshtml" />
+    <Content Include="Views\Healties\Details.cshtml" />
+    <Content Include="Views\Healties\Edit.cshtml" />
+    <Content Include="Views\Healties\Index.cshtml" />
+    <Content Include="Views\Isolateds\Create.cshtml" />
+    <Content Include="Views\Isolateds\Delete.cshtml" />
+    <Content Include="Views\Isolateds\Details.cshtml" />
+    <Content Include="Views\Isolateds\Edit.cshtml" />
+    <Content Include="Views\Isolateds\Index.cshtml" />
+    <Content Include="Views\Sicks\Create.cshtml" />
+    <Content Include="Views\Sicks\Delete.cshtml" />
+    <Content Include="Views\Sicks\Details.cshtml" />
+    <Content Include="Views\Sicks\Edit.cshtml" />
+    <Content Include="Views\Sicks\Index.cshtml" />
+    <Content Include="Views\Recoverings\Create.cshtml" />
+    <Content Include="Views\Recoverings\Delete.cshtml" />
+    <Content Include="Views\Recoverings\Details.cshtml" />
+    <Content Include="Views\Recoverings\Edit.cshtml" />
+    <Content Include="Views\Recoverings\Index.cshtml" />
+    <Content Include="Views\InfecPlaces\Create.cshtml" />
+    <Content Include="Views\InfecPlaces\Delete.cshtml" />
+    <Content Include="Views\InfecPlaces\Details.cshtml" />
+    <Content Include="Views\InfecPlaces\Edit.cshtml" />
+    <Content Include="Views\InfecPlaces\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
