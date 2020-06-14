@@ -13,5 +13,7 @@ namespace CovProj.Models
 
         public string PlaceOfIsolation { get; set; }
         public ICollection<Peoples> isolated { get; set; }
+
+        public Peoples peoples { get; set; }
     }
 }

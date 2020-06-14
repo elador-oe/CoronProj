@@ -137,6 +137,43 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006101520401_InitialCreate.cs" />
+    <Compile Include="Migrations\202006101520401_InitialCreate.designer.cs">
+      <DependentUpon>202006101520401_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006141249139_First.cs" />
+    <Compile Include="Migrations\202006141249139_First.designer.cs">
+      <DependentUpon>202006141249139_First.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006141336031_First1.cs" />
+    <Compile Include="Migrations\202006141336031_First1.designer.cs">
+      <DependentUpon>202006141336031_First1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006141339258_First2.cs" />
+    <Compile Include="Migrations\202006141339258_First2.designer.cs">
+      <DependentUpon>202006141339258_First2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006141353228_Second.cs" />
+    <Compile Include="Migrations\202006141353228_Second.designer.cs">
+      <DependentUpon>202006141353228_Second.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006141356100_Second1.cs" />
+    <Compile Include="Migrations\202006141356100_Second1.designer.cs">
+      <DependentUpon>202006141356100_Second1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006141511308_Third.cs" />
+    <Compile Include="Migrations\202006141511308_Third.designer.cs">
+      <DependentUpon>202006141511308_Third.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006141519187_Third1.cs" />
+    <Compile Include="Migrations\202006141519187_Third1.designer.cs">
+      <DependentUpon>202006141519187_Third1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006141534436_Third2.cs" />
+    <Compile Include="Migrations\202006141534436_Third2.designer.cs">
+      <DependentUpon>202006141534436_Third2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CovidDBContext.cs" />
     <Compile Include="Models\Healty.cs" />
     <Compile Include="Models\InfecPlaces.cs" />
@@ -186,11 +223,11 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\NavigationPagrs\map.cshtml" />
-    <Content Include="Views\Peoples\Create.cshtml" />
-    <Content Include="Views\Peoples\Delete.cshtml" />
-    <Content Include="Views\Peoples\Details.cshtml" />
-    <Content Include="Views\Peoples\Edit.cshtml" />
-    <Content Include="Views\Peoples\Index.cshtml" />
+    <Content Include="Views\InfecPlaces\Create.cshtml" />
+    <Content Include="Views\InfecPlaces\Delete.cshtml" />
+    <Content Include="Views\InfecPlaces\Details.cshtml" />
+    <Content Include="Views\InfecPlaces\Edit.cshtml" />
+    <Content Include="Views\InfecPlaces\Index.cshtml" />
     <Content Include="Views\Healties\Create.cshtml" />
     <Content Include="Views\Healties\Delete.cshtml" />
     <Content Include="Views\Healties\Details.cshtml" />
@@ -201,25 +238,24 @@
     <Content Include="Views\Isolateds\Details.cshtml" />
     <Content Include="Views\Isolateds\Edit.cshtml" />
     <Content Include="Views\Isolateds\Index.cshtml" />
-    <Content Include="Views\Sicks\Create.cshtml" />
-    <Content Include="Views\Sicks\Delete.cshtml" />
-    <Content Include="Views\Sicks\Details.cshtml" />
-    <Content Include="Views\Sicks\Edit.cshtml" />
-    <Content Include="Views\Sicks\Index.cshtml" />
     <Content Include="Views\Recoverings\Create.cshtml" />
     <Content Include="Views\Recoverings\Delete.cshtml" />
     <Content Include="Views\Recoverings\Details.cshtml" />
     <Content Include="Views\Recoverings\Edit.cshtml" />
     <Content Include="Views\Recoverings\Index.cshtml" />
-    <Content Include="Views\InfecPlaces\Create.cshtml" />
-    <Content Include="Views\InfecPlaces\Delete.cshtml" />
-    <Content Include="Views\InfecPlaces\Details.cshtml" />
-    <Content Include="Views\InfecPlaces\Edit.cshtml" />
-    <Content Include="Views\InfecPlaces\Index.cshtml" />
+    <Content Include="Views\Peoples\Create.cshtml" />
+    <Content Include="Views\Peoples\Delete.cshtml" />
+    <Content Include="Views\Peoples\Details.cshtml" />
+    <Content Include="Views\Peoples\Edit.cshtml" />
+    <Content Include="Views\Peoples\Index.cshtml" />
+    <Content Include="Views\Sicks\Create.cshtml" />
+    <Content Include="Views\Sicks\Delete.cshtml" />
+    <Content Include="Views\Sicks\Details.cshtml" />
+    <Content Include="Views\Sicks\Edit.cshtml" />
+    <Content Include="Views\Sicks\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -233,6 +269,35 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202006101520401_InitialCreate.resx">
+      <DependentUpon>202006101520401_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006141249139_First.resx">
+      <DependentUpon>202006141249139_First.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006141336031_First1.resx">
+      <DependentUpon>202006141336031_First1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006141339258_First2.resx">
+      <DependentUpon>202006141339258_First2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006141353228_Second.resx">
+      <DependentUpon>202006141353228_Second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006141356100_Second1.resx">
+      <DependentUpon>202006141356100_Second1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006141511308_Third.resx">
+      <DependentUpon>202006141511308_Third.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006141519187_Third1.resx">
+      <DependentUpon>202006141519187_Third1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006141534436_Third2.resx">
+      <DependentUpon>202006141534436_Third2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

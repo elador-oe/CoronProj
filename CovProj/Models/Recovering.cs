@@ -10,6 +10,8 @@ namespace CovProj.Models
     {
         [Key]
         public int RecoveringId { get; set; }
+        public int PeoplesId { get; set; }
         public ICollection<Peoples> recoverings { get; set; }
+        public Peoples people {get; set;}
     }
 }

@@ -46,11 +46,7 @@ namespace CovProj.Models
         [Required(ErrorMessage = "City is requried")]
         [Display(Name = "City")]
         public string City { get; set; }
-
-        [Display(Name = "Mark if diagnosed")]
-        [Required(AllowEmptyStrings = false)]
-        public bool Diagnosed { get; set; }
-
+        
         [Display(Name = "Date of birth")]
         public DateTime BirthDate { get; set; }
 

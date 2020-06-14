@@ -46,7 +46,7 @@ namespace CovProj.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RecoveringId")] Recovering recovering)
+        public ActionResult Create([Bind(Include = "RecoveringId,PeoplesId")] Recovering recovering)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace CovProj.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RecoveringId")] Recovering recovering)
+        public ActionResult Edit([Bind(Include = "RecoveringId,PeoplesId")] Recovering recovering)
         {
             if (ModelState.IsValid)
             {

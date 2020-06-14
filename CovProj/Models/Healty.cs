@@ -11,5 +11,7 @@ namespace CovProj.Models
         [Key]
         public int HealthyId { get; set; }
         public ICollection<Peoples> healthyUsers { get; set; }
+
+        public Peoples peoples { get; set; }
     }
 }

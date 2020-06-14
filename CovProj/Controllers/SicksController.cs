@@ -46,7 +46,7 @@ namespace CovProj.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SickId")] Sick sick)
+        public ActionResult Create([Bind(Include = "SickId,places")] Sick sick)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace CovProj.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "SickId")] Sick sick)
+        public ActionResult Edit([Bind(Include = "SickId,PlaceId")] Sick sick)
         {
             if (ModelState.IsValid)
             {
