@@ -173,6 +173,10 @@
     <Compile Include="Migrations\202006141534436_Third2.designer.cs">
       <DependentUpon>202006141534436_Third2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006151417596_Four.cs" />
+    <Compile Include="Migrations\202006151417596_Four.designer.cs">
+      <DependentUpon>202006151417596_Four.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CovidDBContext.cs" />
     <Compile Include="Models\Healty.cs" />
@@ -297,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006141534436_Third2.resx">
       <DependentUpon>202006141534436_Third2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006151417596_Four.resx">
+      <DependentUpon>202006151417596_Four.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

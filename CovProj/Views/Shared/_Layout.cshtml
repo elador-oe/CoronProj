@@ -1,40 +1,49 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <script>
+        function goBack() {
+                 window.history.back()
+        }
+    </script>
     <header>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
 
-.navbar {
-  width: 100%;
-  background-color: #555;
-  overflow: auto;
-}
+            .navbar {
+                width: 100%;
+                background-color: #555;
+                overflow: auto;
+            }
 
-.navbar a {
-  float: left;
-  padding: 12px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-}
+                .navbar a {
+                    float: left;
+                    padding: 12px;
+                    color: white;
+                    text-decoration: none;
+                    font-size: 17px;
+                }
 
-.navbar a:hover {
-  background-color: #000;
-}
+                    .navbar a:hover {
+                        background-color: #000;
+                    }
 
-.active {
-  background-color: #4CAF50;
-}
+            .active {
+                background-color: #4CAF50;
+            }
 
- screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
-  }
-}
+            screen and (max-width: 500px) {
+                .navbar a
+
+            {
+                float: none;
+                display: block;
+            }
+            }
         </style>
         <div>
             <div class="navbar">
@@ -78,6 +87,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
         @RenderBody()
         <hr />
         <footer>
+            <input type="button" value="Back" onclick="goBack()">
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
