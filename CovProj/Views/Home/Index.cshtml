@@ -1,9 +1,19 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+
    <html>
     <head>
         <title>W3.CSS</title>
+        
+            <title>Bootstrap Example</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        </head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <style>
@@ -15,44 +25,341 @@
         .bg { /* The image used */ background-image: url(woman-in-white.jpg); /* Full height */ height: 100%; /* Center and scale the image nicely */ background-position: center; background-repeat: no-repeat; background-size: cover; }
         </style>
     </head>
-    <body>
-        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="nav-left" id="mySidebar">
-            <button class="w3-bar-item w3-button w3-large"
-                    onclick="w3_close()">
-                Close &times;
-            </button>
-            <a href="NavigationPagrs/map" class="w3-bar-item w3-button">Map</a>
-            <a href="#" class="w3-bar-item w3-button">Statistics</a>
-            <a href="#" class="w3-bar-item w3-button">home isolation report for international travelers</a>
-            <a href="/Isolateds/Index" class="w3-bar-item w3-button">home isolation report after contact</a>
-            <a href="/Recoverings/Index" class="w3-bar-item w3-button">report recovery</a>
-            <a href="#" class="w3-bar-item w3-button">public information</a>
-        </div>
+        <body>
+            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="nav-left" id="mySidebar">
+                <button class="w3-bar-item w3-button w3-large"
+                        onclick="w3_close()">
+                    Close &times;
+                </button>
+                <a href="https://www.govmap.gov.il/sites/coronamap.html" class="w3-bar-item w3-button">Map</a>
+                <a href="#" class="w3-bar-item w3-button">Statistics</a>
+                <a href="#" class="w3-bar-item w3-button">home isolation report for international travelers</a>
+                <a href="/Isolateds/Index" class="w3-bar-item w3-button">home isolation report after contact</a>
+                <a href="/Recoverings/Index" class="w3-bar-item w3-button">report recovery</a>
+                <a href="#" class="w3-bar-item w3-button">public information</a>
+            </div>
 
-        <div id="main">
+            <div id="main">
 
-            <div class="w3-teal">
-                <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
-                @*<div class="w3-container">
+                <div class="w3-teal">
+                    <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+                    @*<div class="w3-container">
                     <h1>My Page</h1>
                 </div>*@
+                </div>
             </div>
-        </div>
 
-        <script>
-            function w3_open() {
-                document.getElementById("main").style.marginLeft = "25%";
-                document.getElementById("mySidebar").style.width = "25%";
-                document.getElementById("mySidebar").style.display = "block";
-                document.getElementById("openNav").style.display = 'none';
-            }
-            function w3_close() {
-                document.getElementById("main").style.marginLeft = "0%";
-                document.getElementById("mySidebar").style.display = "none";
-                document.getElementById("openNav").style.display = "inline-block";
-            }
-        </script>
-</body>
+            <script>
+                function w3_open() {
+                    document.getElementById("main").style.marginLeft = "25%";
+                    document.getElementById("mySidebar").style.width = "25%";
+                    document.getElementById("mySidebar").style.display = "block";
+                    document.getElementById("openNav").style.display = 'none';
+                }
+                function w3_close() {
+                    document.getElementById("main").style.marginLeft = "0%";
+                    document.getElementById("mySidebar").style.display = "none";
+                    document.getElementById("openNav").style.display = "inline-block";
+                }
+            </script>
+            <div class="jumbotron text-center">
+                <h1>COVID 19-il Colman Home Page</h1>
+                <p>keep the mask on and see the effect!</p>
+                <p>please sing-up</p>
+            </div>
+            <div class="jumbotron text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h3>Covid 19 video</h3>
+                            <h1 style="color:blue;text-align:center;">
+                                <iframe width="900" height="600" src="https://www.youtube.com/embed/ZvLFz1KSYMA">
+                                </iframe>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div id="maincounter-wrap" style="margin-top:15px">
+                                <h1>Coronavirus Cases:</h1>
+                                <div class="maincounter-number">
+                                    <span style="color:#aaa">19,495 </span>
+                                </div>
+                            </div>
+                            <div id="maincounter-wrap" style="margin-top:15px">
+                                <h1>Deaths:</h1>
+                                <div class="maincounter-number">
+                                    <span>302</span>
+                                </div>
+                            </div>
+                            <div id="maincounter-wrap" style="margin-top:15px;">
+                                <h1>Recovered:</h1>
+                                <div class="maincounter-number" style="color:#8ACA2B ">
+                                    <span>15,449</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="text-align:center">
+                                <span class="panel-title" style="font-size:18px; text-transform:uppercase; font-weight:100">
+                                    Active Cases
+                                </span>
+                            </div>
+                            <div class="panel-body" style="text-align:center; height:200px;">
+                                <div class="panel_flip">
+                                    <div class="panel_front" style="width:100%;height:100%;">
+                                        <div class="number-table-main">3,744</div>
+                                        <div style="font-size:13.5px">Currently Infected Patients</div>
+                                        <div style="padding-top:20px;position:relative;text-align:center; ">
+                                            <div style="float:left; text-align:center">
+                                                <span class="number-table" style="color:#8080FF">3,708</span> (<strong>99</strong>%)
+                                                <div style="font-size:13px">in Mild Condition</div><br>
+                                            </div>
+                                            <div style="float:right; text-align:center">
+                                                <span class="number-table" style="color:red ">36</span> (<strong>1</strong>%)
+                                                <div style="font-size:13px">Serious or Critical</div><br>
+                                            </div>
+                                        </div>
+                                        <a class="flip_cases_front" href="javascript: void(0);" style="clear: both;display: block;position:absolute;bottom:-8px;width:100%;">Show Graph</a>
+                                    </div>
+                                    <div class="panel_back" style="width:100%;height:100%;">
+                                        <div id="total-currently-infected-linear" data-highcharts-chart="0" style="overflow: hidden;"><div id="highcharts-hbf8waw-0" dir="ltr" class="highcharts-container " style="position: relative; overflow: hidden; width: 338px; height: 190.125px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="338" height="190.125" viewBox="0 0 338 190.125"><desc>Created with Highcharts 8.1.0</desc><defs><clipPath id="highcharts-hbf8waw-1-"><rect x="0" y="0" width="283" height="120" fill="none"></rect></clipPath></defs><rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="338" height="190.125" rx="0" ry="0"></rect><rect fill="none" class="highcharts-plot-background" x="45" y="10" width="283" height="120"></rect><g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1"><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 45.5 10 L 45.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 66.5 10 L 66.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 87.5 10 L 87.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 108.5 10 L 108.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 129.5 10 L 129.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 150.5 10 L 150.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 170.5 10 L 170.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 191.5 10 L 191.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 212.5 10 L 212.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 233.5 10 L 233.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 254.5 10 L 254.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 275.5 10 L 275.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 296.5 10 L 296.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 317.5 10 L 317.5 130" opacity="1"></path></g><g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1"><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 45 130.5 L 328 130.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 45 90.5 L 328 90.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 45 50.5 L 328 50.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 45 9.5 L 328 9.5" opacity="1"></path></g><rect fill="none" class="highcharts-plot-border" data-z-index="1" x="45" y="10" width="283" height="120"></rect><g class="highcharts-axis highcharts-xaxis" data-z-index="2"><path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" data-z-index="7" d="M 45 130.5 L 328 130.5"></path></g><g class="highcharts-axis highcharts-yaxis" data-z-index="2"><path fill="none" class="highcharts-axis-line" data-z-index="7" d="M 45 10 L 45 130"></path></g><g class="highcharts-series-group" data-z-index="3"><g data-z-index="0.1" class="highcharts-series highcharts-series-0 highcharts-line-series" transform="translate(45,10) scale(1 1)" clip-path="url(#highcharts-hbf8waw-1-)"><path fill="none" d="M 1.1598360655738 120 L 3.4795081967213 120 L 5.7991803278689 120 L 8.1188524590164 120 L 10.438524590164 120 L 12.758196721311 120 L 15.077868852459 119.992 L 17.397540983607 119.992 L 19.717213114754 119.984 L 22.036885245902 119.984 L 24.356557377049 119.984 L 26.676229508197 119.984 L 28.995901639344 119.976 L 31.315573770492 119.952 L 33.635245901639 119.952 L 35.954918032787 119.928 L 38.274590163934 119.912 L 40.594262295082 119.912 L 42.91393442623 119.888 L 45.233606557377 119.88 L 47.553278688525 119.848 L 49.872950819672 119.824 L 52.19262295082 119.712 L 54.512295081967 119.632 L 56.831967213115 119.432 L 59.151639344262 119.256 L 61.47131147541 119.16 L 63.790983606557 118.888 L 66.110655737705 118.488 L 68.430327868852 118.328 L 70.75 117.648 L 73.069672131148 117.392 L 75.389344262295 116.624 L 77.709016393443 114.696 L 80.02868852459 114.488 L 82.348360655738 113.232 L 84.668032786885 111.736 L 86.987704918033 108.8 L 89.30737704918 105.008 L 91.627049180328 101.55199999999999 L 93.946721311475 99.064 L 96.266393442623 96.44800000000001 L 98.58606557377 91.856 L 100.90573770492 87.2 L 103.22540983607 83.856 L 105.54508196721 79.088 L 107.86475409836 73.4 L 110.18442622951 68.136 L 112.50409836066 64.12 L 114.8237704918 60.96 L 117.14344262295 56.768 L 119.4631147541 53.903999999999996 L 121.78278688525 52.696 L 124.10245901639 51.760000000000005 L 126.42213114754 49.032 L 128.74180327869 46.959999999999994 L 131.06147540984 45.592 L 133.38114754098 44.67999999999999 L 135.70081967213 43.08 L 138.02049180328 42.176 L 140.34016393443 41.536 L 142.65983606557 41.616 L 144.97950819672 42.36 L 147.29918032787 42.84 L 149.61885245902 43.480000000000004 L 151.93852459016 44.104 L 154.25819672131 45.992000000000004 L 156.57786885246 47.248000000000005 L 158.89754098361 48 L 161.21721311475 49.111999999999995 L 163.5368852459 50.688 L 165.85655737705 51.91199999999999 L 168.1762295082 54.792 L 170.49590163934 57.824 L 172.81557377049 60.912 L 175.13524590164 62.696 L 177.45491803279 66.24000000000001 L 179.77459016393 69.096 L 182.09426229508 70.184 L 184.41393442623 72.424 L 186.73360655738 75.312 L 189.05327868852 76.52799999999999 L 191.37295081967 77.856 L 193.69262295082 80.304 L 196.01229508197 81.352 L 198.33196721311 81.64 L 200.65163934426 84.75999999999999 L 202.97131147541 86.512 L 205.29098360656 87.584 L 207.6106557377 89.656 L 209.93032786885 90.112 L 212.25 92.128 L 214.56967213115 92.776 L 216.8893442623 95.088 L 219.20901639344 96.432 L 221.52868852459 96.928 L 223.84836065574 98.56 L 226.16803278689 100.032 L 228.48770491803 101.256 L 230.80737704918 101.72 L 233.12704918033 102.832 L 235.44672131148 103.848 L 237.76639344262 104.464 L 240.08606557377 104.728 L 242.40573770492 104.584 L 244.72540983607 104.664 L 247.04508196721 104.208 L 249.36475409836 103.952 L 251.68442622951 103.56 L 254.00409836066 103.176 L 256.3237704918 102.47200000000001 L 258.64344262295 102.03999999999999 L 260.9631147541 100.68 L 263.28278688525 100.208 L 265.60245901639 98.944 L 267.92213114754 98.224 L 270.24180327869 96.896 L 272.56147540984 95.848 L 274.88114754098 94.344 L 277.20081967213 93.48 L 279.52049180328 92.96000000000001 L 281.84016393443 91.84" class="highcharts-graph" data-z-index="1" stroke="#00DDDD" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M 1.1598360655738 120 L 3.4795081967213 120 L 5.7991803278689 120 L 8.1188524590164 120 L 10.438524590164 120 L 12.758196721311 120 L 15.077868852459 119.992 L 17.397540983607 119.992 L 19.717213114754 119.984 L 22.036885245902 119.984 L 24.356557377049 119.984 L 26.676229508197 119.984 L 28.995901639344 119.976 L 31.315573770492 119.952 L 33.635245901639 119.952 L 35.954918032787 119.928 L 38.274590163934 119.912 L 40.594262295082 119.912 L 42.91393442623 119.888 L 45.233606557377 119.88 L 47.553278688525 119.848 L 49.872950819672 119.824 L 52.19262295082 119.712 L 54.512295081967 119.632 L 56.831967213115 119.432 L 59.151639344262 119.256 L 61.47131147541 119.16 L 63.790983606557 118.888 L 66.110655737705 118.488 L 68.430327868852 118.328 L 70.75 117.648 L 73.069672131148 117.392 L 75.389344262295 116.624 L 77.709016393443 114.696 L 80.02868852459 114.488 L 82.348360655738 113.232 L 84.668032786885 111.736 L 86.987704918033 108.8 L 89.30737704918 105.008 L 91.627049180328 101.55199999999999 L 93.946721311475 99.064 L 96.266393442623 96.44800000000001 L 98.58606557377 91.856 L 100.90573770492 87.2 L 103.22540983607 83.856 L 105.54508196721 79.088 L 107.86475409836 73.4 L 110.18442622951 68.136 L 112.50409836066 64.12 L 114.8237704918 60.96 L 117.14344262295 56.768 L 119.4631147541 53.903999999999996 L 121.78278688525 52.696 L 124.10245901639 51.760000000000005 L 126.42213114754 49.032 L 128.74180327869 46.959999999999994 L 131.06147540984 45.592 L 133.38114754098 44.67999999999999 L 135.70081967213 43.08 L 138.02049180328 42.176 L 140.34016393443 41.536 L 142.65983606557 41.616 L 144.97950819672 42.36 L 147.29918032787 42.84 L 149.61885245902 43.480000000000004 L 151.93852459016 44.104 L 154.25819672131 45.992000000000004 L 156.57786885246 47.248000000000005 L 158.89754098361 48 L 161.21721311475 49.111999999999995 L 163.5368852459 50.688 L 165.85655737705 51.91199999999999 L 168.1762295082 54.792 L 170.49590163934 57.824 L 172.81557377049 60.912 L 175.13524590164 62.696 L 177.45491803279 66.24000000000001 L 179.77459016393 69.096 L 182.09426229508 70.184 L 184.41393442623 72.424 L 186.73360655738 75.312 L 189.05327868852 76.52799999999999 L 191.37295081967 77.856 L 193.69262295082 80.304 L 196.01229508197 81.352 L 198.33196721311 81.64 L 200.65163934426 84.75999999999999 L 202.97131147541 86.512 L 205.29098360656 87.584 L 207.6106557377 89.656 L 209.93032786885 90.112 L 212.25 92.128 L 214.56967213115 92.776 L 216.8893442623 95.088 L 219.20901639344 96.432 L 221.52868852459 96.928 L 223.84836065574 98.56 L 226.16803278689 100.032 L 228.48770491803 101.256 L 230.80737704918 101.72 L 233.12704918033 102.832 L 235.44672131148 103.848 L 237.76639344262 104.464 L 240.08606557377 104.728 L 242.40573770492 104.584 L 244.72540983607 104.664 L 247.04508196721 104.208 L 249.36475409836 103.952 L 251.68442622951 103.56 L 254.00409836066 103.176 L 256.3237704918 102.47200000000001 L 258.64344262295 102.03999999999999 L 260.9631147541 100.68 L 263.28278688525 100.208 L 265.60245901639 98.944 L 267.92213114754 98.224 L 270.24180327869 96.896 L 272.56147540984 95.848 L 274.88114754098 94.344 L 277.20081967213 93.48 L 279.52049180328 92.96000000000001 L 281.84016393443 91.84" visibility="visible" data-z-index="2" class="highcharts-tracker-line" stroke-linecap="round" stroke-linejoin="round" stroke="rgba(192,192,192,0.0001)" stroke-width="55"></path></g><g data-z-index="0.1" class="highcharts-markers highcharts-series-0 highcharts-line-series highcharts-tracker" transform="translate(45,10) scale(1 1)"></g></g><text x="169" text-anchor="middle" class="highcharts-title" data-z-index="4" style="color:#333333;font-size:18px;fill:#333333;" y="24"></text><text x="169" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color:#666666;fill:#666666;" y="24"></text><text x="10" text-anchor="start" class="highcharts-caption" data-z-index="4" style="color:#666666;fill:#666666;" y="187"></text><g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7"><text x="48.75256092992467" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 48.75256092992467 146)" y="146" opacity="1"><tspan>Feb 15</tspan></text><text x="215.7689543725507" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 215.7689543725507 146)" y="146" opacity="1"><tspan>Apr 27</tspan></text><text x="69.62961011025267" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 69.62961011025267 146)" y="146" opacity="1"><tspan>Feb 24</tspan></text><text x="90.50665929058067" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 90.50665929058067 146)" y="146" opacity="1"><tspan>Mar 04</tspan></text><text x="111.38370847091068" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 111.38370847091068 146)" y="146" opacity="1"><tspan>Mar 13</tspan></text><text x="132.26075765124068" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 132.26075765124068 146)" y="146" opacity="1"><tspan>Mar 22</tspan></text><text x="153.13780683156068" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 153.13780683156068 146)" y="146" opacity="1"><tspan>Mar 31</tspan></text><text x="174.01485601189069" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 174.01485601189069 146)" y="146" opacity="1"><tspan>Apr 09</tspan></text><text x="194.8919051922207" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 194.8919051922207 146)" y="146" opacity="1"><tspan>Apr 18</tspan></text><text x="236.6460035528707" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 236.6460035528707 146)" y="146" opacity="1"><tspan>May 06</tspan></text><text x="257.52305273320064" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 257.52305273320064 146)" y="146" opacity="1"><tspan>May 15</tspan></text><text x="278.40010191353065" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 278.40010191353065 146)" y="146" opacity="1"><tspan>May 24</tspan></text><text x="299.27715109386065" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 299.27715109386065 146)" y="146" opacity="1"><tspan>Jun 02</tspan></text><text x="320.15420027419066" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 320.15420027419066 146)" y="146" opacity="1"><tspan>Jun 11</tspan></text></g><g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7"><text x="30" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="134" opacity="1">0</text><text x="30" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="94" opacity="1">5k</text><text x="30" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="54" opacity="1">10k</text><text x="30" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="14" opacity="1">15k</text></g></svg></div></div>
+                                        <script type="text/javascript">
+                                            Highcharts.setOptions({
+                                                lang: {
+                                                    thousandsSep: ','
+                                                }
+                                            });
+
+                                            var y_labels = ['0', '20,000', '40,000', '60,000', '140', '180', '200', '240'];
+                                            Highcharts.chart('total-currently-infected-linear', {
+
+
+                                                chart: {
+                                                    type: 'line',
+                                                    height: (9 / 16 * 100) + '%'
+                                                },
+
+                                                title: {
+                                                    text: null
+
+                                                },
+
+                                                /*subtitle: {
+                                                    text: '(Number of Infected People)'
+                                                },*/
+
+                                                xAxis: {
+                                                    categories: ["Feb 15", "Feb 16", "Feb 17", "Feb 18", "Feb 19", "Feb 20", "Feb 21", "Feb 22", "Feb 23", "Feb 24", "Feb 25", "Feb 26", "Feb 27", "Feb 28", "Feb 29", "Mar 01", "Mar 02", "Mar 03", "Mar 04", "Mar 05", "Mar 06", "Mar 07", "Mar 08", "Mar 09", "Mar 10", "Mar 11", "Mar 12", "Mar 13", "Mar 14", "Mar 15", "Mar 16", "Mar 17", "Mar 18", "Mar 19", "Mar 20", "Mar 21", "Mar 22", "Mar 23", "Mar 24", "Mar 25", "Mar 26", "Mar 27", "Mar 28", "Mar 29", "Mar 30", "Mar 31", "Apr 01", "Apr 02", "Apr 03", "Apr 04", "Apr 05", "Apr 06", "Apr 07", "Apr 08", "Apr 09", "Apr 10", "Apr 11", "Apr 12", "Apr 13", "Apr 14", "Apr 15", "Apr 16", "Apr 17", "Apr 18", "Apr 19", "Apr 20", "Apr 21", "Apr 22", "Apr 23", "Apr 24", "Apr 25", "Apr 26", "Apr 27", "Apr 28", "Apr 29", "Apr 30", "May 01", "May 02", "May 03", "May 04", "May 05", "May 06", "May 07", "May 08", "May 09", "May 10", "May 11", "May 12", "May 13", "May 14", "May 15", "May 16", "May 17", "May 18", "May 19", "May 20", "May 21", "May 22", "May 23", "May 24", "May 25", "May 26", "May 27", "May 28", "May 29", "May 30", "May 31", "Jun 01", "Jun 02", "Jun 03", "Jun 04", "Jun 05", "Jun 06", "Jun 07", "Jun 08", "Jun 09", "Jun 10", "Jun 11", "Jun 12", "Jun 13", "Jun 14", "Jun 15"]
+                                                },
+
+                                                yAxis: {
+                                                    title: {
+                                                        text: 'Currently Infected',
+                                                        enabled: false
+
+                                                    }
+                                                    /*tickInterval: 20000,*/
+
+                                                    /*categories: [0,50000],
+                                                    labels: {
+
+                                                        format: "{value:,.%0f}"
+                                                    }*/
+                                                    /*labels: {
+                                                        step: 15
+                                                    }*/
+
+                                                },
+                                                legend: {
+                                                    layout: 'vertical',
+                                                    align: 'right',
+                                                    verticalAlign: 'middle',
+                                                    enabled: false
+                                                },
+
+                                                credits: {
+                                                    enabled: false
+                                                },
+                                                plotOptions: {
+                                                    line: {
+                                                        marker: {
+                                                            enabled: false
+                                                        }
+                                                    }
+                                                },
+
+
+                                                series: [{
+                                                    name: 'Currently Infected',
+                                                    color: '#00DDDD',
+                                                    lineWidth: 5,
+                                                    data: [0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 2, 2, 3, 6, 6, 9, 11, 11, 14, 15, 19, 22, 36, 46, 71, 93, 105, 139, 189, 209, 294, 326, 422, 663, 689, 846, 1033, 1400, 1874, 2306, 2617, 2944, 3518, 4100, 4518, 5114, 5825, 6483, 6985, 7380, 7904, 8262, 8413, 8530, 8871, 9130, 9301, 9415, 9615, 9728, 9808, 9798, 9705, 9645, 9565, 9487, 9251, 9094, 9000, 8861, 8664, 8511, 8151, 7772, 7386, 7163, 6720, 6363, 6227, 5947, 5586, 5434, 5268, 4962, 4831, 4795, 4405, 4186, 4052, 3793, 3736, 3484, 3403, 3114, 2946, 2884, 2680, 2496, 2343, 2285, 2146, 2019, 1942, 1909, 1927, 1917, 1974, 2006, 2055, 2103, 2191, 2245, 2415, 2474, 2632, 2722, 2888, 3019, 3207, 3315, 3380, 3520]
+                                                }],
+
+                                                responsive: {
+                                                    rules: [{
+                                                        condition: {
+                                                            maxWidth: 800
+                                                        },
+                                                        chartOptions: {
+                                                            legend: {
+                                                                layout: 'horizontal',
+                                                                align: 'center',
+                                                                verticalAlign: 'bottom'
+                                                            }
+                                                        }
+                                                    }]
+                                                }
+
+                                            });
+                                        </script>
+                                        <a class="flip_cases_back" href="javascript: void(0);" style="clear: both;position: absolute;width:100%;bottom:-8px;left:0;">Show Statistics</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="text-align:center;">
+                                <span class="panel-title" style="font-size:18px; text-transform:uppercase; font-weight:100">
+                                    Closed Cases
+                                </span>
+                            </div>
+                            <div class="panel-body" style="text-align:center;height:200px;">
+                                <div class="panel_flip">
+                                    <div class="panel_front" style="width:100%;height:100%;">
+                                        <div class="number-table-main">15,751</div>
+                                        <div style="font-size:13.5px">Cases which had an outcome:</div>
+                                        <div style="padding-top:20px ">
+                                            <div style="float:left; text-align:center">
+                                                <span class="number-table" style="color:#8ACA2B">15,449</span>
+                                                (<strong>98</strong>%)
+                                                <div style="font-size:13px">Recovered / Discharged</div><br>
+                                            </div>
+                                            <div style="float:right; text-align:center">
+                                                <span class="number-table">
+                                                    302
+                                                </span>
+                                                (<strong>2</strong>%)
+                                                <div style="font-size:13px">Deaths</div><br>
+                                            </div>
+                                        </div>
+                                        <a class="flip_cases_front" href="javascript: void(0);" style="clear: both;display: block;position:absolute;bottom:-8px;width:100%;">Show Graph</a>
+                                    </div>
+                                    <div class="panel_back" style="width:100%;height:100%;">
+                                        <div id="deaths-cured-outcome-small" data-highcharts-chart="1" style="overflow: hidden;"><div id="highcharts-hbf8waw-127" dir="ltr" class="highcharts-container " style="position: relative; overflow: hidden; width: 338px; height: 190.125px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="338" height="190.125" viewBox="0 0 338 190.125"><desc>Created with Highcharts 8.1.0</desc><defs><clipPath id="highcharts-hbf8waw-128-"><rect x="0" y="0" width="275" height="120" fill="none"></rect></clipPath></defs><rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="338" height="190.125" rx="0" ry="0"></rect><rect fill="none" class="highcharts-plot-background" x="53" y="10" width="275" height="120"></rect><g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1"><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 53.5 10 L 53.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 73.5 10 L 73.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 94.5 10 L 94.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 114.5 10 L 114.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 134.5 10 L 134.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 155.5 10 L 155.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 175.5 10 L 175.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 195.5 10 L 195.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 215.5 10 L 215.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 236.5 10 L 236.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 256.5 10 L 256.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 276.5 10 L 276.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 297.5 10 L 297.5 130" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 317.5 10 L 317.5 130" opacity="1"></path></g><g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1"><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 53 130.5 L 328 130.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 53 70.5 L 328 70.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 53 9.5 L 328 9.5" opacity="1"></path></g><rect fill="none" class="highcharts-plot-border" data-z-index="1" x="53" y="10" width="275" height="120"></rect><g class="highcharts-axis highcharts-xaxis" data-z-index="2"><path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" data-z-index="7" d="M 53 130.5 L 328 130.5"></path></g><g class="highcharts-axis highcharts-yaxis" data-z-index="2"><path fill="none" class="highcharts-axis-line" data-z-index="7" d="M 53 10 L 53 130"></path></g><g class="highcharts-series-group" data-z-index="3"><g data-z-index="0.1" class="highcharts-series highcharts-series-0 highcharts-line-series" transform="translate(53,10) scale(1 1)" clip-path="url(#highcharts-hbf8waw-128-)"><path fill="none" d="M 1.1270491803279 120 L 3.3811475409836 120 L 5.6352459016393 120 L 7.8893442622951 120 L 10.143442622951 120 L 12.397540983607 120 M 30.430327868852 120 L 32.684426229508 120 L 34.938524590164 120 L 37.19262295082 120 L 39.446721311475 120 L 41.700819672131 120 L 43.954918032787 120 L 46.209016393443 120 L 48.463114754098 120 L 50.717213114754 120 L 52.97131147541 120 L 55.225409836066 120 L 57.479508196721 120 L 59.733606557377 120 L 61.987704918033 120 L 64.241803278689 120 L 66.495901639344 120 L 68.75 120 L 71.004098360656 120 L 73.258196721311 120 L 75.512295081967 120 L 77.766393442623 112.5 L 80.020491803279 116.76 L 82.274590163934 116.844 L 84.52868852459 117.144 L 86.782786885246 113.568 L 89.036885245902 110.472 L 91.290983606557 107.364 L 93.545081967213 104.172 L 95.799180327869 105.744 L 98.053278688525 107.76 L 100.30737704918 109.152 L 102.56147540984 110.16 L 104.81557377049 108.312 L 107.06967213115 108.444 L 109.3237704918 109.164 L 111.57786885246 108.792 L 113.83196721311 108.816 L 116.08606557377 109.344 L 118.34016393443 110.664 L 120.59426229508 109.98 L 122.84836065574 110.592 L 125.10245901639 111.084 L 127.35655737705 111.6 L 129.6106557377 112.86 L 131.86475409836 112.932 L 134.11885245902 113.628 L 136.37295081967 114.204 L 138.62704918033 114.24 L 140.88114754098 114.468 L 143.13524590164 114.564 L 145.3893442623 114.744 L 147.64344262295 114.972 L 149.89754098361 115.296 L 152.15163934426 115.8 L 154.40573770492 116.028 L 156.65983606557 116.244 L 158.91393442623 116.4 L 161.16803278689 116.52 L 163.42213114754 116.688 L 165.6762295082 116.832 L 167.93032786885 116.952 L 170.18442622951 116.964 L 172.43852459016 117.12 L 174.69262295082 117.204 L 176.94672131148 117.216 L 179.20081967213 117.264 L 181.45491803279 117.336 L 183.70901639344 117.36 L 185.9631147541 117.408 L 188.21721311475 117.432 L 190.47131147541 117.444 L 192.72540983607 117.408 L 194.97950819672 117.444 L 197.23360655738 117.468 L 199.48770491803 117.468 L 201.74180327869 117.516 L 203.99590163934 117.516 L 206.25 117.552 L 208.50409836066 117.528 L 210.75819672131 117.552 L 213.01229508197 117.56400000000001 L 215.26639344262 117.576 L 217.52049180328 117.612 L 219.77459016393 117.636 L 222.02868852459 117.672 L 224.28278688525 117.684 L 226.5368852459 117.684 L 228.79098360656 117.708 L 231.04508196721 117.732 L 233.29918032787 117.72 L 235.55327868852 117.732 L 237.80737704918 117.744 L 240.06147540984 117.732 L 242.31557377049 117.744 L 244.56967213115 117.72 L 246.8237704918 117.708 L 249.07786885246 117.72 L 251.33196721311 117.72 L 253.58606557377 117.696 L 255.84016393443 117.672 L 258.09426229508 117.672 L 260.34836065574 117.684 L 262.60245901639 117.684 L 264.85655737705 117.684 L 267.1106557377 117.696 L 269.36475409836 117.696 L 271.61885245902 117.708 L 273.87295081967 117.696" class="highcharts-graph" data-z-index="1" stroke="#FF9900" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M 1.1270491803279 120 L 3.3811475409836 120 L 5.6352459016393 120 L 7.8893442622951 120 L 10.143442622951 120 L 12.397540983607 120 M 30.430327868852 120 L 32.684426229508 120 L 34.938524590164 120 L 37.19262295082 120 L 39.446721311475 120 L 41.700819672131 120 L 43.954918032787 120 L 46.209016393443 120 L 48.463114754098 120 L 50.717213114754 120 L 52.97131147541 120 L 55.225409836066 120 L 57.479508196721 120 L 59.733606557377 120 L 61.987704918033 120 L 64.241803278689 120 L 66.495901639344 120 L 68.75 120 L 71.004098360656 120 L 73.258196721311 120 L 75.512295081967 120 L 77.766393442623 112.5 L 80.020491803279 116.76 L 82.274590163934 116.844 L 84.52868852459 117.144 L 86.782786885246 113.568 L 89.036885245902 110.472 L 91.290983606557 107.364 L 93.545081967213 104.172 L 95.799180327869 105.744 L 98.053278688525 107.76 L 100.30737704918 109.152 L 102.56147540984 110.16 L 104.81557377049 108.312 L 107.06967213115 108.444 L 109.3237704918 109.164 L 111.57786885246 108.792 L 113.83196721311 108.816 L 116.08606557377 109.344 L 118.34016393443 110.664 L 120.59426229508 109.98 L 122.84836065574 110.592 L 125.10245901639 111.084 L 127.35655737705 111.6 L 129.6106557377 112.86 L 131.86475409836 112.932 L 134.11885245902 113.628 L 136.37295081967 114.204 L 138.62704918033 114.24 L 140.88114754098 114.468 L 143.13524590164 114.564 L 145.3893442623 114.744 L 147.64344262295 114.972 L 149.89754098361 115.296 L 152.15163934426 115.8 L 154.40573770492 116.028 L 156.65983606557 116.244 L 158.91393442623 116.4 L 161.16803278689 116.52 L 163.42213114754 116.688 L 165.6762295082 116.832 L 167.93032786885 116.952 L 170.18442622951 116.964 L 172.43852459016 117.12 L 174.69262295082 117.204 L 176.94672131148 117.216 L 179.20081967213 117.264 L 181.45491803279 117.336 L 183.70901639344 117.36 L 185.9631147541 117.408 L 188.21721311475 117.432 L 190.47131147541 117.444 L 192.72540983607 117.408 L 194.97950819672 117.444 L 197.23360655738 117.468 L 199.48770491803 117.468 L 201.74180327869 117.516 L 203.99590163934 117.516 L 206.25 117.552 L 208.50409836066 117.528 L 210.75819672131 117.552 L 213.01229508197 117.56400000000001 L 215.26639344262 117.576 L 217.52049180328 117.612 L 219.77459016393 117.636 L 222.02868852459 117.672 L 224.28278688525 117.684 L 226.5368852459 117.684 L 228.79098360656 117.708 L 231.04508196721 117.732 L 233.29918032787 117.72 L 235.55327868852 117.732 L 237.80737704918 117.744 L 240.06147540984 117.732 L 242.31557377049 117.744 L 244.56967213115 117.72 L 246.8237704918 117.708 L 249.07786885246 117.72 L 251.33196721311 117.72 L 253.58606557377 117.696 L 255.84016393443 117.672 L 258.09426229508 117.672 L 260.34836065574 117.684 L 262.60245901639 117.684 L 264.85655737705 117.684 L 267.1106557377 117.696 L 269.36475409836 117.696 L 271.61885245902 117.708 L 273.87295081967 117.696" visibility="visible" data-z-index="2" class="highcharts-tracker-line" stroke-linecap="round" stroke-linejoin="round" stroke="rgba(192,192,192,0.0001)" stroke-width="55"></path></g><g data-z-index="0.1" class="highcharts-markers highcharts-series-0 highcharts-line-series highcharts-tracker" transform="translate(53,10) scale(1 1)"></g><g data-z-index="0.1" class="highcharts-series highcharts-series-1 highcharts-line-series" transform="translate(53,10) scale(1 1)" clip-path="url(#highcharts-hbf8waw-128-)"><path fill="none" d="M 1.1270491803279 120 L 3.3811475409836 120 L 5.6352459016393 120 L 7.8893442622951 120 L 10.143442622951 120 L 12.397540983607 120 L 14.651639344262 120 L 16.905737704918 120 L 19.159836065574 120 M 30.430327868852 0 L 32.684426229508 0 L 34.938524590164 0 L 37.19262295082 0 L 39.446721311475 0 L 41.700819672131 0 L 43.954918032787 0 L 46.209016393443 0 L 48.463114754098 0 L 50.717213114754 0 L 52.97131147541 0 L 55.225409836066 0 L 57.479508196721 0 L 59.733606557377 0 L 61.987704918033 0 L 64.241803278689 0 L 66.495901639344 0 L 68.75 0 L 71.004098360656 0 L 73.258196721311 0 L 75.512295081967 0 L 77.766393442623 7.5 L 80.020491803279 3.240000000000009 L 82.274590163934 3.156000000000006 L 84.52868852459 2.8559999999999945 L 86.782786885246 6.432000000000002 L 89.036885245902 9.528000000000006 L 91.290983606557 12.63600000000001 L 93.545081967213 15.828000000000003 L 95.799180327869 14.256 L 98.053278688525 12.240000000000009 L 100.30737704918 10.848000000000013 L 102.56147540984 9.840000000000003 L 104.81557377049 11.688000000000002 L 107.06967213115 11.555999999999997 L 109.3237704918 10.835999999999999 L 111.57786885246 11.208000000000013 L 113.83196721311 11.183999999999997 L 116.08606557377 10.655999999999992 L 118.34016393443 9.335999999999999 L 120.59426229508 10.019999999999996 L 122.84836065574 9.408000000000001 L 125.10245901639 8.916000000000011 L 127.35655737705 8.400000000000006 L 129.6106557377 7.140000000000001 L 131.86475409836 7.067999999999998 L 134.11885245902 6.372 L 136.37295081967 5.7960000000000065 L 138.62704918033 5.760000000000005 L 140.88114754098 5.5319999999999965 L 143.13524590164 5.436000000000007 L 145.3893442623 5.256 L 147.64344262295 5.028000000000006 L 149.89754098361 4.704000000000008 L 152.15163934426 4.200000000000003 L 154.40573770492 3.9720000000000084 L 156.65983606557 3.7560000000000002 L 158.91393442623 3.6000000000000085 L 161.16803278689 3.480000000000018 L 163.42213114754 3.312000000000012 L 165.6762295082 3.1680000000000064 L 167.93032786885 3.048000000000016 L 170.18442622951 3.0360000000000014 L 172.43852459016 2.8800000000000097 L 174.69262295082 2.7960000000000065 L 176.94672131148 2.783999999999992 L 179.20081967213 2.736000000000004 L 181.45491803279 2.6640000000000015 L 183.70901639344 2.640000000000015 L 185.9631147541 2.5919999999999987 L 188.21721311475 2.568000000000012 L 190.47131147541 2.5559999999999974 L 192.72540983607 2.5919999999999987 L 194.97950819672 2.5559999999999974 L 197.23360655738 2.5320000000000107 L 199.48770491803 2.5320000000000107 L 201.74180327869 2.4839999999999947 L 203.99590163934 2.4839999999999947 L 206.25 2.4480000000000075 L 208.50409836066 2.4720000000000084 L 210.75819672131 2.4480000000000075 L 213.01229508197 2.436000000000007 L 215.26639344262 2.4240000000000066 L 217.52049180328 2.3880000000000052 L 219.77459016393 2.3640000000000043 L 222.02868852459 2.328000000000003 L 224.28278688525 2.3160000000000167 L 226.5368852459 2.3160000000000167 L 228.79098360656 2.2920000000000016 L 231.04508196721 2.2680000000000007 L 233.29918032787 2.2800000000000153 L 235.55327868852 2.2680000000000007 L 237.80737704918 2.2560000000000002 L 240.06147540984 2.2680000000000007 L 242.31557377049 2.2560000000000002 L 244.56967213115 2.2800000000000153 L 246.8237704918 2.2920000000000016 L 249.07786885246 2.2800000000000153 L 251.33196721311 2.2800000000000153 L 253.58606557377 2.304000000000002 L 255.84016393443 2.328000000000003 L 258.09426229508 2.328000000000003 L 260.34836065574 2.3160000000000167 L 262.60245901639 2.3160000000000167 L 264.85655737705 2.3160000000000167 L 267.1106557377 2.304000000000002 L 269.36475409836 2.304000000000002 L 271.61885245902 2.2920000000000016 L 273.87295081967 2.304000000000002" class="highcharts-graph" data-z-index="1" stroke="#8ACA2B" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M 1.1270491803279 120 L 3.3811475409836 120 L 5.6352459016393 120 L 7.8893442622951 120 L 10.143442622951 120 L 12.397540983607 120 L 14.651639344262 120 L 16.905737704918 120 L 19.159836065574 120 M 30.430327868852 0 L 32.684426229508 0 L 34.938524590164 0 L 37.19262295082 0 L 39.446721311475 0 L 41.700819672131 0 L 43.954918032787 0 L 46.209016393443 0 L 48.463114754098 0 L 50.717213114754 0 L 52.97131147541 0 L 55.225409836066 0 L 57.479508196721 0 L 59.733606557377 0 L 61.987704918033 0 L 64.241803278689 0 L 66.495901639344 0 L 68.75 0 L 71.004098360656 0 L 73.258196721311 0 L 75.512295081967 0 L 77.766393442623 7.5 L 80.020491803279 3.240000000000009 L 82.274590163934 3.156000000000006 L 84.52868852459 2.8559999999999945 L 86.782786885246 6.432000000000002 L 89.036885245902 9.528000000000006 L 91.290983606557 12.63600000000001 L 93.545081967213 15.828000000000003 L 95.799180327869 14.256 L 98.053278688525 12.240000000000009 L 100.30737704918 10.848000000000013 L 102.56147540984 9.840000000000003 L 104.81557377049 11.688000000000002 L 107.06967213115 11.555999999999997 L 109.3237704918 10.835999999999999 L 111.57786885246 11.208000000000013 L 113.83196721311 11.183999999999997 L 116.08606557377 10.655999999999992 L 118.34016393443 9.335999999999999 L 120.59426229508 10.019999999999996 L 122.84836065574 9.408000000000001 L 125.10245901639 8.916000000000011 L 127.35655737705 8.400000000000006 L 129.6106557377 7.140000000000001 L 131.86475409836 7.067999999999998 L 134.11885245902 6.372 L 136.37295081967 5.7960000000000065 L 138.62704918033 5.760000000000005 L 140.88114754098 5.5319999999999965 L 143.13524590164 5.436000000000007 L 145.3893442623 5.256 L 147.64344262295 5.028000000000006 L 149.89754098361 4.704000000000008 L 152.15163934426 4.200000000000003 L 154.40573770492 3.9720000000000084 L 156.65983606557 3.7560000000000002 L 158.91393442623 3.6000000000000085 L 161.16803278689 3.480000000000018 L 163.42213114754 3.312000000000012 L 165.6762295082 3.1680000000000064 L 167.93032786885 3.048000000000016 L 170.18442622951 3.0360000000000014 L 172.43852459016 2.8800000000000097 L 174.69262295082 2.7960000000000065 L 176.94672131148 2.783999999999992 L 179.20081967213 2.736000000000004 L 181.45491803279 2.6640000000000015 L 183.70901639344 2.640000000000015 L 185.9631147541 2.5919999999999987 L 188.21721311475 2.568000000000012 L 190.47131147541 2.5559999999999974 L 192.72540983607 2.5919999999999987 L 194.97950819672 2.5559999999999974 L 197.23360655738 2.5320000000000107 L 199.48770491803 2.5320000000000107 L 201.74180327869 2.4839999999999947 L 203.99590163934 2.4839999999999947 L 206.25 2.4480000000000075 L 208.50409836066 2.4720000000000084 L 210.75819672131 2.4480000000000075 L 213.01229508197 2.436000000000007 L 215.26639344262 2.4240000000000066 L 217.52049180328 2.3880000000000052 L 219.77459016393 2.3640000000000043 L 222.02868852459 2.328000000000003 L 224.28278688525 2.3160000000000167 L 226.5368852459 2.3160000000000167 L 228.79098360656 2.2920000000000016 L 231.04508196721 2.2680000000000007 L 233.29918032787 2.2800000000000153 L 235.55327868852 2.2680000000000007 L 237.80737704918 2.2560000000000002 L 240.06147540984 2.2680000000000007 L 242.31557377049 2.2560000000000002 L 244.56967213115 2.2800000000000153 L 246.8237704918 2.2920000000000016 L 249.07786885246 2.2800000000000153 L 251.33196721311 2.2800000000000153 L 253.58606557377 2.304000000000002 L 255.84016393443 2.328000000000003 L 258.09426229508 2.328000000000003 L 260.34836065574 2.3160000000000167 L 262.60245901639 2.3160000000000167 L 264.85655737705 2.3160000000000167 L 267.1106557377 2.304000000000002 L 269.36475409836 2.304000000000002 L 271.61885245902 2.2920000000000016 L 273.87295081967 2.304000000000002" visibility="visible" data-z-index="2" class="highcharts-tracker-line" stroke-linecap="round" stroke-linejoin="round" stroke="rgba(192,192,192,0.0001)" stroke-width="55"></path></g><g data-z-index="0.1" class="highcharts-markers highcharts-series-1 highcharts-line-series highcharts-tracker" transform="translate(53,10) scale(1 1)"></g></g><text x="169" text-anchor="middle" class="highcharts-title" data-z-index="4" style="color:#333333;font-size:18px;fill:#333333;" y="24"></text><text x="169" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color:#666666;fill:#666666;" y="24"></text><text x="10" text-anchor="start" class="highcharts-caption" data-z-index="4" style="color:#666666;fill:#666666;" y="187"></text><g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7"><text x="56.71977404467867" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 56.71977404467867 146)" y="146" opacity="1"><tspan>Feb 15</tspan></text><text x="219.01485601189069" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 219.01485601189069 146)" y="146" opacity="1"><tspan>Apr 27</tspan></text><text x="77.00665929058067" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 77.00665929058067 146)" y="146" opacity="1"><tspan>Feb 24</tspan></text><text x="97.29354453648168" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 97.29354453648168 146)" y="146" opacity="1"><tspan>Mar 04</tspan></text><text x="117.58042978238068" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 117.58042978238068 146)" y="146" opacity="1"><tspan>Mar 13</tspan></text><text x="137.86731502828067" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 137.86731502828067 146)" y="146" opacity="1"><tspan>Mar 22</tspan></text><text x="158.15420027419069" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 158.15420027419069 146)" y="146" opacity="1"><tspan>Mar 31</tspan></text><text x="178.4410855200907" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 178.4410855200907 146)" y="146" opacity="1"><tspan>Apr 09</tspan></text><text x="198.72797076599068" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 198.72797076599068 146)" y="146" opacity="1"><tspan>Apr 18</tspan></text><text x="239.3017412577907" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 239.3017412577907 146)" y="146" opacity="1"><tspan>May 06</tspan></text><text x="259.58862650369065" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 259.58862650369065 146)" y="146" opacity="1"><tspan>May 15</tspan></text><text x="279.87551174960066" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 279.87551174960066 146)" y="146" opacity="1"><tspan>May 24</tspan></text><text x="300.16239699550067" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 300.16239699550067 146)" y="146" opacity="1"><tspan>Jun 02</tspan></text><text x="320.4492822414007" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 320.4492822414007 146)" y="146" opacity="1"><tspan>Jun 11</tspan></text></g><g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7"><text x="38" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="134" opacity="1">0%</text><text x="38" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="74" opacity="1">50%</text><text x="38" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="14" opacity="1">100%</text></g></svg></div></div>
+                                        <script type="text/javascript">
+                                            Highcharts.chart('deaths-cured-outcome-small', {
+                                                chart: {
+                                                    type: 'line',
+                                                    height: (9 / 16 * 100) + '%'
+
+                                                },
+                                                title: {
+                                                    text: ''
+
+                                                },
+                                                tooltip: {
+                                                    pointFormat: '{series.name}: <b>{point.y:.2f}%</b>'
+                                                },
+
+
+
+                                                /* subtitle: {
+                                                     text: '(Cumulative total deaths and recoveries over cumulative number of closed cases)'
+                                                 },*/
+
+                                                xAxis: {
+                                                    categories: ["Feb 15", "Feb 16", "Feb 17", "Feb 18", "Feb 19", "Feb 20", "Feb 21", "Feb 22", "Feb 23", "Feb 24", "Feb 25", "Feb 26", "Feb 27", "Feb 28", "Feb 29", "Mar 01", "Mar 02", "Mar 03", "Mar 04", "Mar 05", "Mar 06", "Mar 07", "Mar 08", "Mar 09", "Mar 10", "Mar 11", "Mar 12", "Mar 13", "Mar 14", "Mar 15", "Mar 16", "Mar 17", "Mar 18", "Mar 19", "Mar 20", "Mar 21", "Mar 22", "Mar 23", "Mar 24", "Mar 25", "Mar 26", "Mar 27", "Mar 28", "Mar 29", "Mar 30", "Mar 31", "Apr 01", "Apr 02", "Apr 03", "Apr 04", "Apr 05", "Apr 06", "Apr 07", "Apr 08", "Apr 09", "Apr 10", "Apr 11", "Apr 12", "Apr 13", "Apr 14", "Apr 15", "Apr 16", "Apr 17", "Apr 18", "Apr 19", "Apr 20", "Apr 21", "Apr 22", "Apr 23", "Apr 24", "Apr 25", "Apr 26", "Apr 27", "Apr 28", "Apr 29", "Apr 30", "May 01", "May 02", "May 03", "May 04", "May 05", "May 06", "May 07", "May 08", "May 09", "May 10", "May 11", "May 12", "May 13", "May 14", "May 15", "May 16", "May 17", "May 18", "May 19", "May 20", "May 21", "May 22", "May 23", "May 24", "May 25", "May 26", "May 27", "May 28", "May 29", "May 30", "May 31", "Jun 01", "Jun 02", "Jun 03", "Jun 04", "Jun 05", "Jun 06", "Jun 07", "Jun 08", "Jun 09", "Jun 10", "Jun 11", "Jun 12", "Jun 13", "Jun 14", "Jun 15"]
+                                                },
+
+                                                yAxis: {
+                                                    title: {
+                                                        text: 'Percent (%)',
+                                                        enabled: false
+                                                    },
+                                                    labels: {
+
+                                                        format: "{value}%"
+                                                    },
+                                                    max: 100
+
+
+                                                },
+                                                legend: {
+                                                    layout: 'vertical',
+                                                    align: 'right',
+                                                    verticalAlign: 'middle',
+                                                    enabled: false
+                                                },
+
+                                                credits: {
+                                                    enabled: false
+                                                },
+
+                                                plotOptions: {
+                                                    line: {
+                                                        marker: {
+                                                            enabled: false
+                                                        }
+                                                    }
+                                                },
+
+
+                                                series: [{
+                                                    name: 'Death Rate',
+                                                    color: '#FF9900',
+                                                    lineWidth: 5,
+
+                                                    data: [0, 0, 0, 0, 0, 0, "nan", "nan", "nan", "nan", "nan", "nan", "nan", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.25, 2.70000000000000017763568394002504646778106689453125, 2.62999999999999989341858963598497211933135986328125, 2.37999999999999989341858963598497211933135986328125, 5.36000000000000031974423109204508364200592041015625, 7.94000000000000039079850466805510222911834716796875, 10.5299999999999993605115378159098327159881591796875, 13.1899999999999995026200849679298698902130126953125, 11.8800000000000007815970093361102044582366943359375, 10.199999999999999289457264239899814128875732421875, 9.03999999999999914734871708787977695465087890625, 8.199999999999999289457264239899814128875732421875, 9.7400000000000002131628207280300557613372802734375, 9.6300000000000007815970093361102044582366943359375, 9.0299999999999993605115378159098327159881591796875, 9.339999999999999857891452847979962825775146484375, 9.32000000000000028421709430404007434844970703125, 8.8800000000000007815970093361102044582366943359375, 7.78000000000000024868995751603506505489349365234375, 8.3499999999999996447286321199499070644378662109375, 7.839999999999999857891452847979962825775146484375, 7.42999999999999971578290569595992565155029296875, 7, 5.95000000000000017763568394002504646778106689453125, 5.88999999999999968025576890795491635799407958984375, 5.30999999999999960920149533194489777088165283203125, 4.8300000000000000710542735760100185871124267578125, 4.79999999999999982236431605997495353221893310546875, 4.61000000000000031974423109204508364200592041015625, 4.53000000000000024868995751603506505489349365234375, 4.37999999999999989341858963598497211933135986328125, 4.19000000000000039079850466805510222911834716796875, 3.9199999999999999289457264239899814128875732421875, 3.5, 3.310000000000000053290705182007513940334320068359375, 3.12999999999999989341858963598497211933135986328125, 3, 2.899999999999999911182158029987476766109466552734375, 2.7599999999999997868371792719699442386627197265625, 2.640000000000000124344978758017532527446746826171875, 2.54000000000000003552713678800500929355621337890625, 2.529999999999999804600747665972448885440826416015625, 2.399999999999999911182158029987476766109466552734375, 2.3300000000000000710542735760100185871124267578125, 2.319999999999999840127884453977458178997039794921875, 2.279999999999999804600747665972448885440826416015625, 2.220000000000000195399252334027551114559173583984375, 2.20000000000000017763568394002504646778106689453125, 2.160000000000000142108547152020037174224853515625, 2.140000000000000124344978758017532527446746826171875, 2.12999999999999989341858963598497211933135986328125, 2.160000000000000142108547152020037174224853515625, 2.12999999999999989341858963598497211933135986328125, 2.109999999999999875655021241982467472553253173828125, 2.109999999999999875655021241982467472553253173828125, 2.069999999999999840127884453977458178997039794921875, 2.069999999999999840127884453977458178997039794921875, 2.04000000000000003552713678800500929355621337890625, 2.060000000000000053290705182007513940334320068359375, 2.04000000000000003552713678800500929355621337890625, 2.029999999999999804600747665972448885440826416015625, 2.020000000000000017763568394002504646778106689453125, 1.9899999999999999911182158029987476766109466552734375, 1.9699999999999999733546474089962430298328399658203125, 1.939999999999999946709294817992486059665679931640625, 1.9299999999999999378275106209912337362766265869140625, 1.9299999999999999378275106209912337362766265869140625, 1.9099999999999999200639422269887290894985198974609375, 1.8899999999999999023003738329862244427204132080078125, 1.899999999999999911182158029987476766109466552734375, 1.8899999999999999023003738329862244427204132080078125, 1.87999999999999989341858963598497211933135986328125, 1.8899999999999999023003738329862244427204132080078125, 1.87999999999999989341858963598497211933135986328125, 1.899999999999999911182158029987476766109466552734375, 1.9099999999999999200639422269887290894985198974609375, 1.899999999999999911182158029987476766109466552734375, 1.899999999999999911182158029987476766109466552734375, 1.9199999999999999289457264239899814128875732421875, 1.939999999999999946709294817992486059665679931640625, 1.939999999999999946709294817992486059665679931640625, 1.9299999999999999378275106209912337362766265869140625, 1.9299999999999999378275106209912337362766265869140625, 1.9299999999999999378275106209912337362766265869140625, 1.9199999999999999289457264239899814128875732421875, 1.9199999999999999289457264239899814128875732421875, 1.9099999999999999200639422269887290894985198974609375, 1.9199999999999999289457264239899814128875732421875]
+                                                },
+                                                {
+                                                    name: 'Recovery Rate',
+                                                    color: '#8ACA2B',
+                                                    lineWidth: 5,
+                                                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, "nan", "nan", "nan", "nan", 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 93.75, 97.2999999999999971578290569595992565155029296875, 97.3700000000000045474735088646411895751953125, 97.6200000000000045474735088646411895751953125, 94.6400000000000005684341886080801486968994140625, 92.06000000000000227373675443232059478759765625, 89.469999999999998863131622783839702606201171875, 86.81000000000000227373675443232059478759765625, 88.1200000000000045474735088646411895751953125, 89.7999999999999971578290569595992565155029296875, 90.9599999999999937472239253111183643341064453125, 91.7999999999999971578290569595992565155029296875, 90.2600000000000051159076974727213382720947265625, 90.3700000000000045474735088646411895751953125, 90.969999999999998863131622783839702606201171875, 90.659999999999996589394868351519107818603515625, 90.68000000000000682121026329696178436279296875, 91.1200000000000045474735088646411895751953125, 92.219999999999998863131622783839702606201171875, 91.650000000000005684341886080801486968994140625, 92.159999999999996589394868351519107818603515625, 92.56999999999999317878973670303821563720703125, 93, 94.0499999999999971578290569595992565155029296875, 94.1099999999999994315658113919198513031005859375, 94.68999999999999772626324556767940521240234375, 95.1700000000000017053025658242404460906982421875, 95.2000000000000028421709430404007434844970703125, 95.3900000000000005684341886080801486968994140625, 95.469999999999998863131622783839702606201171875, 95.6200000000000045474735088646411895751953125, 95.81000000000000227373675443232059478759765625, 96.0799999999999982946974341757595539093017578125, 96.5, 96.68999999999999772626324556767940521240234375, 96.8700000000000045474735088646411895751953125, 97, 97.099999999999994315658113919198513031005859375, 97.2399999999999948840923025272786617279052734375, 97.3599999999999994315658113919198513031005859375, 97.4599999999999937472239253111183643341064453125, 97.469999999999998863131622783839702606201171875, 97.599999999999994315658113919198513031005859375, 97.6700000000000017053025658242404460906982421875, 97.68000000000000682121026329696178436279296875, 97.719999999999998863131622783839702606201171875, 97.780000000000001136868377216160297393798828125, 97.7999999999999971578290569595992565155029296875, 97.840000000000003410605131648480892181396484375, 97.8599999999999994315658113919198513031005859375, 97.8700000000000045474735088646411895751953125, 97.840000000000003410605131648480892181396484375, 97.8700000000000045474735088646411895751953125, 97.8900000000000005684341886080801486968994140625, 97.8900000000000005684341886080801486968994140625, 97.93000000000000682121026329696178436279296875, 97.93000000000000682121026329696178436279296875, 97.9599999999999937472239253111183643341064453125, 97.93999999999999772626324556767940521240234375, 97.9599999999999937472239253111183643341064453125, 97.969999999999998863131622783839702606201171875, 97.9800000000000039790393202565610408782958984375, 98.0100000000000051159076974727213382720947265625, 98.030000000000001136868377216160297393798828125, 98.06000000000000227373675443232059478759765625, 98.06999999999999317878973670303821563720703125, 98.06999999999999317878973670303821563720703125, 98.090000000000003410605131648480892181396484375, 98.1099999999999994315658113919198513031005859375, 98.099999999999994315658113919198513031005859375, 98.1099999999999994315658113919198513031005859375, 98.1200000000000045474735088646411895751953125, 98.1099999999999994315658113919198513031005859375, 98.1200000000000045474735088646411895751953125, 98.099999999999994315658113919198513031005859375, 98.090000000000003410605131648480892181396484375, 98.099999999999994315658113919198513031005859375, 98.099999999999994315658113919198513031005859375, 98.0799999999999982946974341757595539093017578125, 98.06000000000000227373675443232059478759765625, 98.06000000000000227373675443232059478759765625, 98.06999999999999317878973670303821563720703125, 98.06999999999999317878973670303821563720703125, 98.06999999999999317878973670303821563720703125, 98.0799999999999982946974341757595539093017578125, 98.0799999999999982946974341757595539093017578125, 98.090000000000003410605131648480892181396484375, 98.0799999999999982946974341757595539093017578125]
+                                                }
+                                                ],
+
+                                                responsive: {
+                                                    rules: [{
+                                                        condition: {
+                                                            maxWidth: 400
+                                                        },
+                                                        chartOptions: {
+                                                            legend: {
+                                                                layout: 'horizontal',
+                                                                align: 'center',
+                                                                verticalAlign: 'bottom'
+                                                            }
+                                                        }
+                                                    }]
+                                                }
+
+                                            });
+                                        </script>
+                                        <a class="flip_cases_back" href="javascript: void(0);" style="clear: both;position: absolute;width:100%;bottom:-8px;left:0;">Show Statistics</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </body>
 
     </html>
 
