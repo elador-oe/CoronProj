@@ -12,6 +12,10 @@ namespace CovProj.Controllers
         {
             return View();
         }
+        public ActionResult map()
+        {
+            return View();
+        }
 
         public ActionResult About()
         {

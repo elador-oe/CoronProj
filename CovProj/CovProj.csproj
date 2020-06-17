@@ -177,6 +177,10 @@
     <Compile Include="Migrations\202006151417596_Four.designer.cs">
       <DependentUpon>202006151417596_Four.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006171220184_Fifth.cs" />
+    <Compile Include="Migrations\202006171220184_Fifth.designer.cs">
+      <DependentUpon>202006171220184_Fifth.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CovidDBContext.cs" />
     <Compile Include="Models\Healty.cs" />
@@ -256,8 +260,7 @@
     <Content Include="Views\Sicks\Details.cshtml" />
     <Content Include="Views\Sicks\Edit.cshtml" />
     <Content Include="Views\Sicks\Index.cshtml" />
-    <Content Include="Views\Map\Map.cshtml" />
-    <Content Include="Views\Home\Map.cshtml" />
+    <None Include="Views\Home\map.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -305,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006151417596_Four.resx">
       <DependentUpon>202006151417596_Four.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006171220184_Fifth.resx">
+      <DependentUpon>202006171220184_Fifth.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

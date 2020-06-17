@@ -25,10 +25,10 @@ namespace CovProj.Models
         [Display(Name = "ID number")]
         public int Identification { get; set; }
 
-        [Required(ErrorMessage = "Password is requried")]
-        [DataType(DataType.Password)]
-        [Display(Name = "Password")]
-        public string Password { get; set; }
+        //[Required(ErrorMessage = "Password is requried")]
+        //[DataType(DataType.Password)]
+        //[Display(Name = "Password")]
+        //public string Password { get; set; }
 
         [Required(ErrorMessage = "Phone number name is requried")]
         [DataType(DataType.PhoneNumber)]

@@ -173,4 +173,4 @@ C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CoronProj\CovProj\o
 C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CoronProj\CovProj\obj\Debug\CovProj.Migrations.Third1.resources
 C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CoronProj\CovProj\obj\Debug\CovProj.Migrations.Third2.resources
 C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CoronProj\CovProj\obj\Debug\CovProj.Migrations.Four.resources
-C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CoronProj\CovProj\obj\Debug\CovProj.csprojAssemblyReference.cache
+C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CoronProj\CovProj\obj\Debug\CovProj.Migrations.Fifth.resources
