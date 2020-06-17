@@ -48,6 +48,7 @@ namespace CovProj.Models
         public string City { get; set; }
         
         [Display(Name = "Date of birth")]
+        [DataType(DataType.Date)]
         public DateTime BirthDate { get; set; }
 
         [ScaffoldColumn(false)]
