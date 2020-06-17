@@ -226,7 +226,6 @@
     <Content Include="Views\Home\Public information.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\NavigationPagrs\map.cshtml" />
     <Content Include="Views\InfecPlaces\Create.cshtml" />
     <Content Include="Views\InfecPlaces\Delete.cshtml" />
     <Content Include="Views\InfecPlaces\Details.cshtml" />
@@ -257,6 +256,8 @@
     <Content Include="Views\Sicks\Details.cshtml" />
     <Content Include="Views\Sicks\Edit.cshtml" />
     <Content Include="Views\Sicks\Index.cshtml" />
+    <Content Include="Views\Map\Map.cshtml" />
+    <Content Include="Views\Home\Map.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
