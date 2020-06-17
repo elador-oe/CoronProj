@@ -261,6 +261,8 @@
     <Content Include="Views\Sicks\Edit.cshtml" />
     <Content Include="Views\Sicks\Index.cshtml" />
     <None Include="Views\Home\map.cshtml" />
+    <Content Include="Views\Peoples\SearchPerson.cshtml" />
+    <Content Include="Views\Peoples\NoResults.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

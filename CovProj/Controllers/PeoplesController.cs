@@ -118,6 +118,32 @@ namespace CovProj.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        public ActionResult SearchPerson(Peoples person)
+        {
+            if (person.City == null)
+                person.City = "null";
+
+            if (person.Address == null)
+                person.Address = "null";
+
+            if (person.PhoneNumber == null)
+                person.PhoneNumber = "null";
+
+            List<Peoples> Persons = db.peoples.Where(p => p.City.Contains(person.City) &&
+                                                  p.Address.Contains(person.Address) &&
+                                                  p.PhoneNumber.Contains(person.PhoneNumber)).ToList();
+
+            if (Persons.Count == 0 || person == null)
+                return View("NoResults");
+
+            return View(Persons);
+        }
+        public ActionResult NoResults()
+        {
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
