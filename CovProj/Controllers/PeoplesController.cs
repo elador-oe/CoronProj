@@ -121,14 +121,17 @@ namespace CovProj.Controllers
         [HttpPost]
         public ActionResult SearchPerson(Peoples person)
         {
-            if (person.City == null)
-                person.City = "null";
+            if (person.City == null )
+                person.City = "";
 
             if (person.Address == null)
-                person.Address = "null";
+                person.Address = "";
 
             if (person.PhoneNumber == null)
-                person.PhoneNumber = "null";
+                person.PhoneNumber = "";
+
+            if(person.City == "" && person.Address == "" && person.PhoneNumber == "")
+                return View("NoResults");
 
             List<Peoples> Persons = db.peoples.Where(p => p.City.Contains(person.City) &&
                                                   p.Address.Contains(person.Address) &&

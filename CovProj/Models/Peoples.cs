@@ -30,7 +30,7 @@ namespace CovProj.Models
         //[Display(Name = "Password")]
         //public string Password { get; set; }
 
-        [Required(ErrorMessage = "Phone number name is requried")]
+        [Required(ErrorMessage = "Phone number is requried")]
         [DataType(DataType.PhoneNumber)]
         [Display(Name = "Phone numeber")]
         public string PhoneNumber { get; set; }
