@@ -11,6 +11,7 @@ namespace CovProj.Models
         [Key]
         public int IsolatedId { get; set; }
 
+        [DataType(DataType.Text)]
         public string PlaceOfIsolation { get; set; }
         public ICollection<Peoples> isolated { get; set; }
 

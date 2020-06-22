@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
+using System.Runtime.Remoting.Messaging;
 using System.Web;
 using System.Web.Mvc;
 using CovProj.Models;
@@ -58,7 +60,8 @@ namespace CovProj.Controllers
             return View(isolated);
         }
 
-        // GET: Isolateds/Edit/5
+        // GET: Isolateds/Edit/5'
+ 
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -72,7 +75,18 @@ namespace CovProj.Controllers
             }
             return View(isolated);
         }
-
+        [HttpPost]
+        public ActionResult CheckId(int? id)
+        {
+            if (id == null)
+                return View("IdNotFound");
+            long count = db.peoples.LongCount(u => u.Identification == id);
+            if (count != 0)
+            {
+                return View("Create");
+            }
+            return View("IdNotFound");
+        }
         // POST: Isolateds/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -113,6 +127,10 @@ namespace CovProj.Controllers
             db.isolateds.Remove(isolated);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult IdChecker()
+        {
+            return View();
         }
 
         protected override void Dispose(bool disposing)
