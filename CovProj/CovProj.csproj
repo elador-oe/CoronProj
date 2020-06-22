@@ -269,6 +269,7 @@
     <Content Include="Views\Sicks\Details.cshtml" />
     <Content Include="Views\Sicks\Edit.cshtml" />
     <Content Include="Views\Sicks\Index.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
     <None Include="Views\Home\map.cshtml" />
     <Content Include="Views\Peoples\SearchPerson.cshtml" />
     <Content Include="Views\Peoples\NoResults.cshtml" />

@@ -51,8 +51,15 @@
                 <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
                 <a href="/Home/Contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
                 <ul class="nav navbar-nav navbar-right">
-                    <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
-                    <a href="/Peoples/Create"><i class="fa fa-fw fa-user"></i> Sign up</a>
+                    @if (Session["PeoplesId"] == null)
+                    {
+                        <a href="/Home/Login"><i class="fa fa-fw fa-user"></i> Login</a>
+                        <a href="/Peoples/Create"><i class="fa fa-fw fa-user"></i>Register</a>
+                    }
+                    else
+                    {
+                <h1> <strong style="font-size: 200%">@Session["Fullname"]</strong></h1>
+                    }
                 </ul>
             </div>
         </div>
