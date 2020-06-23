@@ -29,7 +29,10 @@
                     @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
                 </div>
             </div>*@
-
+            @if(Session["login"] == "true")
+            {
+                Response.Write("<script>alert('wrong id please register')</script>");
+            }
             <br />
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
