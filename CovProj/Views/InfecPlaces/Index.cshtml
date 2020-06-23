@@ -13,7 +13,6 @@
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.City)
-            
         </th>
         <th></th>
     </tr>
@@ -24,12 +23,9 @@
             @Html.DisplayFor(modelItem => item.City)
         </td>
         <td>
-            @if (Session["Admin"] == "true")
-            {
-                @Html.ActionLink("Edit", "Edit", new { id = item.PlaceId })}|
-            @Html.ActionLink("Details", "Details", new { id = item.PlaceId }) |
-            @if (Session["Admin"] == "true") {
-                @Html.ActionLink("Delete", "Delete", new { id = item.PlaceId })}
+            @Html.ActionLink("Edit", "Edit", new { id=item.PlaceId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PlaceId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PlaceId })
         </td>
     </tr>
 }

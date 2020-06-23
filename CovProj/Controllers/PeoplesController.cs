@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+
 using System.Web;
 using System.Web.Mvc;
 using CovProj.Models;
@@ -50,17 +51,21 @@ namespace CovProj.Controllers
         public ActionResult Create([Bind(Include = "PeoplesId,FirstName,LastName,Identification,PhoneNumber,Address,Email,City,BirthDate,IsAdmin")] Peoples peoples)
         //Password field removed
         {
-            bool userExists = db.peoples.FirstOrDefault(x => x.PeoplesId == peoples.PeoplesId)==null;
-            if (userExists)
+           bool userExists = db.peoples.FirstOrDefault(x => x.Identification == peoples.Identification)==null;
+            if (!userExists)
             {
                 ModelState.AddModelError("UserName", "UserName taken");
+                Session["usertaken"] = "true";
                 return View(peoples);
             }
+           
             if (ModelState.IsValid)
             {
                 db.peoples.Add(peoples);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                Session["usertaken"] = "false";
+                return RedirectToAction("Index","Home");
+
             }
 
             return View(peoples);

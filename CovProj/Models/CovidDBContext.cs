@@ -15,5 +15,6 @@ namespace CovProj.Models
         public DbSet<Recovering> recoverings { get; set; }
         public DbSet<Sick> sicks { get; set; }
 
+       
     }
 }

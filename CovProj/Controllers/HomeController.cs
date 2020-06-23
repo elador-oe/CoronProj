@@ -22,6 +22,10 @@ namespace CovProj.Controllers
         {
             return View();
         }
+        public ActionResult Public_information()
+        {
+            return View();
+        }
 
         [HttpPost]
         public ActionResult Login(Peoples people)
@@ -45,7 +49,6 @@ namespace CovProj.Controllers
                 ModelState.AddModelError("", "Wrong credentials");
                 return RedirectToAction("Create", "Peoples");
             }
-            return View();
         }
         public ActionResult Logout()
         {
