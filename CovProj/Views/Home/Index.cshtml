@@ -32,10 +32,20 @@
                     Close &times;
                 </button>
                 <a href="/Home/map" class="w3-bar-item w3-button">Map</a>
-                <a href="#" class="w3-bar-item w3-button">Statistics</a>
-                <a href="#" class="w3-bar-item w3-button">home isolation report for international travelers</a>
-                <a href="/Isolateds/IdChecker" class="w3-bar-item w3-button">home isolation report after contact</a>
-                <a href="/Recoverings/Index" class="w3-bar-item w3-button">report recovery</a>
+                <a href="https://datadashboard.health.gov.il/COVID-19/?utm_source=go.gov.il&utm_medium=referral" class="w3-bar-item w3-button">Statistics</a>
+                @if (Session["Username"] != null)
+                { <a href="#" class="w3-bar-item w3-button">home isolation report for international travelers</a>}
+                @if (Session["Username"] != null)
+                {
+                    <a href="/Isolateds/IdChecker" class="w3-bar-item w3-button">home isolation report after contact</a>
+                }
+                @if (Session["Username"] != null)
+                {
+                    <a href="/Recoverings/Index" class="w3-bar-item w3-button">report recovery</a>
+                }
+                @if (Session["Admin"] == "true")
+                {<a href="/Peoples/Index" class="w3-bar-item w3-button">edit Accounts</a>
+                }
                 <a href="#" class="w3-bar-item w3-button">public information</a>
             </div>
 
@@ -63,7 +73,12 @@
                 }
             </script>
             <div class="jumbotron text-center">
+
                 <h1>COVID 19-il Colman Home Page</h1>
+                @if (Session["Username"] != null)
+                {
+                    <p>hellow @Session["Username"]</p>
+                }
                 <p>keep the mask on and see the effect!</p>
                 <p>please sing-up</p>
             </div>

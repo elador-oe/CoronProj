@@ -23,9 +23,11 @@
             @Html.DisplayFor(modelItem => item.PeoplesId)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RecoveringId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RecoveringId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RecoveringId })
+            @if (Session["Admin"] == "true")
+            {@Html.ActionLink("Edit", "Edit", new { id = item.RecoveringId })}|
+            @Html.ActionLink("Details", "Details", new { id = item.RecoveringId }) |
+            @if (Session["Admin"] == "true") {
+                @Html.ActionLink("Delete", "Delete", new { id = item.RecoveringId })}
         </td>
     </tr>
 }

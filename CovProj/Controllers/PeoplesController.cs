@@ -50,6 +50,12 @@ namespace CovProj.Controllers
         public ActionResult Create([Bind(Include = "PeoplesId,FirstName,LastName,Identification,PhoneNumber,Address,Email,City,BirthDate,IsAdmin")] Peoples peoples)
         //Password field removed
         {
+            bool userExists = db.peoples.FirstOrDefault(x => x.PeoplesId == peoples.PeoplesId)==null;
+            if (userExists)
+            {
+                ModelState.AddModelError("UserName", "UserName taken");
+                return View(peoples);
+            }
             if (ModelState.IsValid)
             {
                 db.peoples.Add(peoples);

@@ -51,14 +51,14 @@
                 <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
                 <a href="/Home/Contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
                 <ul class="nav navbar-nav navbar-right">
-                    @if (Session["PeoplesId"] == null)
+                    @if (Session["Username"] == null)
                     {
                         <a href="/Home/Login"><i class="fa fa-fw fa-user"></i> Login</a>
                         <a href="/Peoples/Create"><i class="fa fa-fw fa-user"></i>Register</a>
                     }
-                    else
+                    @if (Session["Username"] != null)
                     {
-                <h1> <strong style="font-size: 200%">@Session["Fullname"]</strong></h1>
+                        <a href="/Home/Logout"><i class="fa fa-fw fa-user"></i> Logout</a>
                     }
                 </ul>
             </div>

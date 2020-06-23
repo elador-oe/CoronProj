@@ -86,9 +86,11 @@
                 @Html.DisplayFor(modelItem => item.BirthDate)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.PeoplesId }) |
+                @if (Session["Admin"] == "true")
+                {@Html.ActionLink("Edit", "Edit", new { id = item.PeoplesId })} |
                 @Html.ActionLink("Details", "Details", new { id = item.PeoplesId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.PeoplesId })
+                @if (Session["Admin"] == "true")
+                {@Html.ActionLink("Delete", "Delete", new { id = item.PeoplesId })}
             </td>
         </tr>
     }

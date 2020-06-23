@@ -18,11 +18,15 @@ namespace CovProj.Controllers
         {
             return View();
         }
+        public ActionResult Statistic()
+        {
+            return View();
+        }
 
         [HttpPost]
         public ActionResult Login(Peoples people)
         {
-            var loggedUser = db.peoples.Where(u => u.Email == people.Email).FirstOrDefault();
+            var loggedUser = db.peoples.Where(u => u.Identification == people.Identification).FirstOrDefault();
 
             if (loggedUser != null)
             {
@@ -30,9 +34,17 @@ namespace CovProj.Controllers
                 return RedirectToAction("Index");
             }
 
-            else
+            if (loggedUser == null)
+            {
+               
                 ModelState.AddModelError("", "Wrong credentials");
-
+                return RedirectToAction("Create", "Peoples");
+            }
+            else
+            {
+                ModelState.AddModelError("", "Wrong credentials");
+                return RedirectToAction("Create", "Peoples");
+            }
             return View();
         }
         public ActionResult Logout()

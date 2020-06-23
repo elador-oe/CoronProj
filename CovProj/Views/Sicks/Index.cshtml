@@ -23,9 +23,12 @@
             @Html.DisplayFor(modelItem => item.PlaceId)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.SickId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SickId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SickId })
+            @if (Session["Admin"] == "true")
+            {
+                @Html.ActionLink("Edit", "Edit", new { id = item.SickId })} |
+            @Html.ActionLink("Details", "Details", new { id = item.SickId }) |
+            @if (Session["Admin"] == "true") {
+                @Html.ActionLink("Delete", "Delete", new { id = item.SickId })}
         </td>
     </tr>
 }

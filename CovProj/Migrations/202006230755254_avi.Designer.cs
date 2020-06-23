@@ -7,13 +7,13 @@ namespace CovProj.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Second : IMigrationMetadata
+    public sealed partial class avi : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Second));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(avi));
         
         string IMigrationMetadata.Id
         {
-            get { return "202006141353228_Second"; }
+            get { return "202006230755254_avi"; }
         }
         
         string IMigrationMetadata.Source
