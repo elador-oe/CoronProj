@@ -48,7 +48,7 @@ namespace CovProj.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PeoplesId,FirstName,LastName,Identification,PhoneNumber,Address,Email,City,BirthDate,IsAdmin")] Peoples peoples)
+        public ActionResult Create([Bind(Include = "PeoplesId,FirstName,LastName,Identification,Password,PhoneNumber,Address,Email,City,BirthDate,IsAdmin")] Peoples peoples)
         //Password field removed
         {
            bool userExists = db.peoples.FirstOrDefault(x => x.Identification == peoples.Identification)==null;
@@ -91,7 +91,7 @@ namespace CovProj.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PeoplesId,FirstName,LastName,Identification,PhoneNumber,Address,Email,City,BirthDate,IsAdmin")] Peoples peoples)
+        public ActionResult Edit([Bind(Include = "PeoplesId,FirstName,LastName,Identification,Password,PhoneNumber,Address,Email,City,BirthDate,IsAdmin")] Peoples peoples)
             //Password field removed
         {
             if (ModelState.IsValid)

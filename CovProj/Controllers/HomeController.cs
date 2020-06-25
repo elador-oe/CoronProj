@@ -30,7 +30,7 @@ namespace CovProj.Controllers
         [HttpPost]
         public ActionResult Login(Peoples people)
         {
-            var loggedUser = db.peoples.Where(u => u.Identification == people.Identification).FirstOrDefault();
+            var loggedUser = db.peoples.Where(u => u.Identification == people.Identification && u.Password == people.Password).FirstOrDefault();
 
             if (loggedUser != null)
             {
