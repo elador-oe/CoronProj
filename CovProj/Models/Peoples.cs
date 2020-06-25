@@ -19,7 +19,7 @@ namespace CovProj.Models
         [Display(Name = "Last name")]
         public string LastName { get; set; }
 
-
+      
         [Required(ErrorMessage = "Identification number is requried")]
        
         [Display(Name = "ID number")]
