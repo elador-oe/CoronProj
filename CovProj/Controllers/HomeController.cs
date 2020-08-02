@@ -26,6 +26,10 @@ namespace CovProj.Controllers
         {
             return View();
         }
+        public ActionResult About()
+        {
+            return View();
+        }
 
         [HttpPost]
         public ActionResult Login(Peoples people)

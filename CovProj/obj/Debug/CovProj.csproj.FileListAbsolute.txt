@@ -178,3 +178,4 @@ C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CoronProj\CovProj\b
 C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CoronProj\CovProj\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CoronProj\CovProj\obj\Debug\CovProj.Migrations.Av.resources
 C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CoronProj\CovProj\obj\Debug\CovProj.Migrations.Sixth.resources
+C:\Users\elado_t3zw1v2\Desktop\study\Apps developing\CovProj\CoronProj\CovProj\obj\Debug\CovProj.csprojAssemblyReference.cache

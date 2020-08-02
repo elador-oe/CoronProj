@@ -1,15 +1,9 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Treatment Centers";
 }
-    <h2>
-        the drive in covid test stations are
-           </h2>
-    <h3>check out our in the map</h3>
-
-<address>
-  
-</address>
-
+<h1 style="text-align:center;color:darkblue;font-size:300%;">@ViewBag.Title</h1>
+<!--<h3>@ViewBag.Message</h3>-->
+<p>    </p>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -23,6 +17,7 @@
     }
     /* Optional: Makes the sample page fill the window. */
     html, body {
+        background-color:cornsilk;
         height: 100%;
         margin: 0;
         padding: 0;
@@ -45,7 +40,7 @@
 
 
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf4FwuZH5bGfF2PQ0YeR-avw4MIlMPWGY&callback=myMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlqMNjOukkIGtgSq9VLZgI0gL433XPy0A&callback=initMap">
 </script>
 
 <table class="table table-condesed table-hover">
@@ -62,8 +57,8 @@
         <tr>
             <th scope="row">1</th>
             <td>Center</td>
-            <td>Rishon Le Zion</td>
-            <td>Eli wiesel 2</td>
+            <td>Tel-Aviv</td>
+            <td>Gani-Yehosoha</td>
             <td>
                 <div id="store1">
                     <button type="button">Show on map</button>
@@ -84,9 +79,9 @@
         </tr>
         <tr>
             <th scope="row">3</th>
-            <td>South</td>
-            <td>Beer Sheva</td>
-            <td>Ben gurion Blvd 1</td>
+            <td>Center</td>
+            <td>Tel-Aviv</td>
+            <td>Expo Tel-Avivs</td>
             <td>
                 <div id="store3">
                     <button type="button">Show on map</button>
@@ -103,14 +98,14 @@
 
 
             map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 31.970038, lng: 34.771454 },
+                center: { lat: 32.057472, lng: 34.857500 },
 
                 zoom: 16,
                 disableDefaultUI: true
             });
 
             var marker = new google.maps.Marker({
-                position: { lat: 31.970038, lng: 34.771454 },
+                position: { lat: 32.057472, lng: 34.857500 },
                 map: map
 
             });
@@ -126,12 +121,12 @@
 
 
             map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 31.265966, lng: 34.760671 },
+                center: { lat: 32.788832, lng: 34.987544 },
                 zoom: 16,
                 disableDefaultUI: true
             });
             var marker = new google.maps.Marker({
-                position: { lat: 31.265966, lng: 34.760671 },
+                position: { lat: 32.788832, lng: 34.987544 },
                 map: map
 
             });
@@ -148,17 +143,33 @@
 
 
             map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 31.261281, lng: 34.804144 },
+                center: { lat: 32.149164, lng: 34.85613 },
                 zoom: 16,
                 disableDefaultUI: true
             });
 
             var marker = new google.maps.Marker({
-                position: { lat: 31.261281, lng: 34.804144 },
+                position: { lat: 32.149164, lng: 34.85613 },
                 map: map
 
             });
         });
     })</script>
 <!-- //////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<h3 style="color:tomato;">
+ Our Page For Getting Information :
+</h3>
+
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="RhBCLLjf"></script>
+
+
+
+<div class="fb-page" data-href="https://www.facebook.com/Corona-Virus-Proj-104880671287712/" data-tabs="timeline" data-width="300" data-height="150" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Corona-Virus-Proj-104880671287712/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Corona-Virus-Proj-104880671287712/">Corona Virus Proj</a></blockquote></div>
+
+<div class="fb-like" data-href="https://www.facebook.com/Corona-Virus-Proj-104880671287712/?view_public_for=104880671287712" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+
 <br />
