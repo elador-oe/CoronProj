@@ -23,6 +23,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
+            div.polaroid {
+                width: 250px;
+                box-shadow: 10px 10px #555;
+            }
             body {
                 font-family: Arial, Helvetica, sans-serif;
             }
@@ -67,15 +71,18 @@
         <div>
             <div class="navbar">
                 <a class="active" href="/Home/Index"><i class="fa fa-fw fa-home"></i> Home</a>
-                <!--<a href="#"><i class="fa fa-fw fa-search"></i> Search</a>-->
-                <div class="row">
-                    <div class="pull-right" style="padding-right:10px;">
-                        <button type="submit" value="Search" class="btn btn-sm btn-primary">
-                            <span class="glyphicon glyphicon-search"></span>
-                            <span>Search</span>
-                    </div>
+                @*<a href="#"><i class="fa fa-fw fa-search"></i> Search</a>*@
+            <div class="row">
+                @*<div class="pull-right" style="padding-right:10px;">
+            <button type="submit" value="Search" class="btn btn-sm btn-primary">
+                <span class="glyphicon glyphicon-search"></span>
+                <span>Search</span>
+        </div>*@
+                <div class="polaroid">
                     <div class="pull-right" id="myInput">
-                        @Html.Editor("search", new { htmlattributes = new { @class = "form-control input-sm", @id = "target" } })
+                        @*@Html.Editor("search", new { htmlattributes = new { @class = "form-control input-sm", @id = "target" } })*@
+                        <script async src="https://cse.google.com/cse.js?cx=016782691127320595280:59rmo-ydote"></script>
+                        <div class="gcse-search"></div>
                     </div>
                 </div>
                 <a href="/Home/Contact"><i class="fa fa-fw fa-envelope"></i> Treatment Centers</a>
