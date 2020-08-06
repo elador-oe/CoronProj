@@ -284,6 +284,7 @@
     <Content Include="Views\Peoples\NoResults.cshtml" />
     <Content Include="Views\Isolateds\IdNotFound.cshtml" />
     <Content Include="Views\Isolateds\IdChecker.cshtml" />
+    <Content Include="Views\Home\Statistic.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
