@@ -1,81 +1,95 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <script>
-        function goBack() {
-            window.history.back()
-        }
-        function goContact() {
-            location.href = "./Contact";
-        }
-        function goAbout() {
-            location.href = "./About";
-        }
-        function strSearch() {
-            var inputVal = document.getElementById("myInput").focus();
-            alert(inputVal);
-        }
-    </script>
+    <title>W3.CSS</title>
 
-    <header>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            div.polaroid {
-                width: 250px;
-                box-shadow: 10px 10px #555;
-            }
-            body {
-                font-family: Arial, Helvetica, sans-serif;
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<script>
+    function goBack() {
+        window.history.back()
+    }
+    function goContact() {
+        location.href = "/Home/Contact";
+    }
+    function goAbout() {
+        location.href = "/Home/About";
+    }
+    function strSearch() {
+        var inputVal = document.getElementById("myInput").focus();
+        alert(inputVal);
+    }
+</script>
+
+<header>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        div.polaroid {
+            width: 250px;
+            box-shadow: 10px 10px #555;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #555;
+            overflow: auto;
+        }
+
+            .navbar a {
+                float: left;
+                padding: 12px;
+                color: white;
+                text-decoration: none;
+                font-size: 17px;
             }
 
-            .navbar {
-                width: 100%;
-                background-color: #555;
-                overflow: auto;
-            }
-
-                .navbar a {
-                    float: left;
-                    padding: 12px;
-                    color: white;
-                    text-decoration: none;
-                    font-size: 17px;
+                .navbar a:hover {
+                    background-color: #000;
                 }
 
-                    .navbar a:hover {
-                        background-color: #000;
-                    }
+        .active {
+            background-color: #4CAF50;
+        }
 
-            .active {
-                background-color: #4CAF50;
-            }
+        .btn-primary {
+            color: #fff;
+            background-color: #767676;
+            border-color: #777777;
+        }
 
-            .btn-primary {
-                color: #fff;
-                background-color: #767676;
-                border-color: #777777;
-            }
+        screen and (max-width: 500px) {
+            .navbar a
 
-            screen and (max-width: 500px) {
-                .navbar a
-
-            {
-                float: none;
-                display: block;
-            }
-            }
-        </style>
-        <div>
-            <div class="navbar">
-                <a class="active" href="/Home/Index"><i class="fa fa-fw fa-home"></i> Home</a>
-                @*<a href="#"><i class="fa fa-fw fa-search"></i> Search</a>*@
+        {
+            float: none;
+            display: block;
+        }
+        }
+    </style>
+    <div>
+        <div class="navbar">
+            <a class="active" href="/Home/Index"><i class="fa fa-fw fa-home"></i> Home</a>
+            @*<a href="#"><i class="fa fa-fw fa-search"></i> Search</a>*@
             <div class="row">
                 @*<div class="pull-right" style="padding-right:10px;">
-            <button type="submit" value="Search" class="btn btn-sm btn-primary">
-                <span class="glyphicon glyphicon-search"></span>
-                <span>Search</span>
-        </div>*@
+                        <button type="submit" value="Search" class="btn btn-sm btn-primary">
+                            <span class="glyphicon glyphicon-search"></span>
+                            <span>Search</span>
+                    </div>*@
                 <div class="polaroid">
                     <div class="pull-right" id="myInput">
                         @*@Html.Editor("search", new { htmlattributes = new { @class = "form-control input-sm", @id = "target" } })*@
@@ -89,14 +103,14 @@
                     <a href="/Peoples/Create"><i class="fa fa-fw fa-user"></i> Sign up</a>
                 </ul>
             </div>
-                </div>
         </div>
-    </header>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    </div>
+</header>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@ViewBag.Title - My ASP.NET Application</title>
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     @*<div class="navbar navbar-inverse navbar-fixed-top">

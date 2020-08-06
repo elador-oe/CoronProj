@@ -222,6 +222,7 @@
     <Content Include="media\woman-in-white.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -285,6 +286,7 @@
     <Content Include="Views\Isolateds\IdNotFound.cshtml" />
     <Content Include="Views\Isolateds\IdChecker.cshtml" />
     <Content Include="Views\Home\Statistic.cshtml" />
+    <Content Include="Views\Peoples\JoinSick.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,16 +1,18 @@
-﻿
+﻿@model IEnumerable<CovProj.Models.Peoples>
 @{
     ViewBag.Title = "Statistics";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    List<string[]> SickList = ViewBag.LikesPerUser;
-    List<string[]> HealthyList = ViewBag.CommentsPerUser;
+    List<string[]> SickList = ViewBag.GetSickPeoples;
 }
 
-@section Header{
-    <header class="major">
+@*@section Header{
+    <header class="major">*@
         <h2>User Statistics</h2>
-    </header>
-}
+    @*</header>
+}*@
+<p>
+    @Html.ActionLink("Create New", "JoinSick")
+</p>
 
 
 <div>
@@ -28,7 +30,7 @@
             </th>
         </tr>
 
-        @foreach (var item in SickList)
+        @*@foreach (var item in SickList)
         {
             <tr>
                 <td>
@@ -59,24 +61,24 @@
             <th>
                 <b># of comments</b>
             </th>
-        </tr>
+        </tr>*@
 
-        @foreach (var item in HealthyList)
-        {
-            <tr>
-                <td>
-                    @item[0]
-                </td>
+        @*@foreach (var item in HealthyList)
+            {
+                <tr>
+                    <td>
+                        @item[0]
+                    </td>
 
-                <td>
-                    @item[1]
-                </td>
+                    <td>
+                        @item[1]
+                    </td>
 
-                <td>
-                    @item[2]
-                </td>
-            </tr>
-        }
+                    <td>
+                        @item[2]
+                    </td>
+                </tr>
+            }*@
 
     </table>
 </div>

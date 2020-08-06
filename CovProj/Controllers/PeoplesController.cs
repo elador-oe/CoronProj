@@ -157,6 +157,28 @@ namespace CovProj.Controllers
         {
             return View();
         }
+        public ActionResult JoinSick()
+        {
+
+            ViewBag.GetSickPeoples = GetSickPeoples();
+            return View("Statistic");
+        }
+        private List<string[]> GetSickPeoples()
+        {
+            var joinSickPeoples = (from u in db.peoples
+                                     join c in db.sicks on u.PeoplesId equals c.PeoplesId
+                                     select new { u.FirstName, u.LastName });
+
+            var CitySickPeople = (from r in joinSickPeoples
+                                  group r by new { r.FirstName, r.LastName } into g
+                                   select new { g.Key.FirstName, g.Key.LastName, City = g.Count() }).ToList();
+            List<string[]> commentsList = new List<string[]>();
+
+            foreach (var City in CitySickPeople)
+                commentsList.Add(new string[] { City.FirstName, City.LastName, City.City.ToString() });
+
+            return commentsList;
+        }
 
         protected override void Dispose(bool disposing)
         {

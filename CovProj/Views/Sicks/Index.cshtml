@@ -7,12 +7,12 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Report as a sick", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.PlaceId)
+            @Html.DisplayNameFor(model => model.SickId)
         </th>
         <th></th>
     </tr>
@@ -20,7 +20,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.PlaceId)
+            @Html.DisplayFor(modelItem => item.SickId)
         </td>
         <td>
             @if (Session["Admin"] == "true")
