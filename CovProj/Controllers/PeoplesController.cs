@@ -160,22 +160,48 @@ namespace CovProj.Controllers
         public ActionResult JoinSick()
         {
 
-           // ViewBag.GetSickPeoples = GetSickPeoples();
-            return View("Statistic");
+            ViewBag.GetSickPeoples = GetSickPeoples();
+            return View();
         }
+        public ActionResult JoinCity()
+        {
+
+            ViewBag.GetSickCity = GetSickCity();
+            return View();
+        }
+
         private List<string[]> GetSickPeoples()
         {
             var joinSickPeoples = (from u in db.peoples
-                                     join c in db.sicks on u.PeoplesId equals c.SickId
-                                     select new { u.FirstName, u.LastName });
+                                     join c in db.sicks on u.Identification equals c.PeoplesId
+                                     select new { u.FirstName, u.LastName,u.Identification,u.City });
+
 
             var CitySickPeople = (from r in joinSickPeoples
-                                  group r by new { r.FirstName, r.LastName } into g
-                                   select new { g.Key.FirstName, g.Key.LastName, City = g.Count() }).ToList();
+                                  group r by new { r.FirstName, r.LastName,r.City,r.Identification } into g
+                                   select new { g.Key.FirstName, g.Key.LastName, g.Key.City,g.Key.Identification }).ToList();
             List<string[]> commentsList = new List<string[]>();
 
             foreach (var p in CitySickPeople)
-                commentsList.Add(new string[] { p.FirstName, p.LastName, p.City.ToString() });
+                commentsList.Add(new string[] { p.FirstName, p.LastName, p.City.ToString(),p.Identification.ToString() });
+
+            return commentsList;
+        }
+
+        private List<string[]> GetSickCity()
+        {
+            var joinSickCity = (from u in db.peoples
+                                   join c in db.sicks on u.City equals c.Place
+                                   select new { u.FirstName, u.LastName, u.Identification, u.City });
+
+
+            var CitySickPeople = (from r in joinSickCity
+                                  group r by new { r.FirstName, r.LastName, r.City, r.Identification } into g
+                                  select new { g.Key.FirstName, g.Key.LastName, g.Key.City, g.Key.Identification }).ToList();
+            List<string[]> commentsList = new List<string[]>();
+
+            foreach (var p in CitySickPeople)
+                commentsList.Add(new string[] { p.FirstName, p.LastName, p.City.ToString(), p.Identification.ToString() });
 
             return commentsList;
         }

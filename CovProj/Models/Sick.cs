@@ -10,7 +10,10 @@ namespace CovProj.Models
     {
         [Key]
         public int SickId { get; set; }
+        [Display(Name = "ID")]
         public int PeoplesId { get; set; }
+        [Display(Name = "PLACE")]
+        public string Place { get; set; }
         public int PlaceId { get; set; }
         public ICollection<Peoples> sickers { get; set; }
         public Peoples peoples { get; set; }

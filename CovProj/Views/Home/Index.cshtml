@@ -36,8 +36,8 @@
                 </button>
                 <a href="/Home/map" class="w3-bar-item w3-button">Map</a>
                 <a href="https://datadashboard.health.gov.il/COVID-19/?utm_source=go.gov.il&utm_medium=referral" class="w3-bar-item w3-button">Statistics</a>
-                @if (Session["Username"] != null)
-                {<a href="#" class="w3-bar-item w3-button">home isolation report for international travelers</a>}
+                @*@if (Session["Username"] != null)
+                {<a href="#" class="w3-bar-item w3-button">home isolation report for international travelers</a>}*@
                 @if (Session["Username"] != null)
                 {
                     <a href="/Sicks/Create" class="w3-bar-item w3-button">Reoprt for sickness</a>

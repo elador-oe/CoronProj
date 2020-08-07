@@ -19,60 +19,34 @@
             @Html.DisplayNameFor(model => model.LastName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Identification)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Address)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.City)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.BirthDate)
+            @Html.DisplayNameFor(model => model.Identification)
         </th>
+  
         <th></th>
+
+
     </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Identification)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhoneNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BirthDate)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.PeoplesId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.PeoplesId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.PeoplesId })
-            </td>
-        </tr>
-    }
-
+    @foreach (var item in ViewBag.GetSickPeoples)
+        {
+            <tr>
+                <td>
+                    @item[0]
+                </td>
+                <td>
+                    @item[1]
+                </td>
+                <td>
+                    @item[2]
+                </td>
+                <td>
+                    @item[3]
+                </td>
+                       
+            </tr>
+        }
 </table>
 

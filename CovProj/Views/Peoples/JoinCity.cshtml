@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CovProj.Models.Peoples>
+
+@{
+    ViewBag.Title = "JoinSick";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>SickCitysicky</h2>
+
+<p>
+    @Html.ActionLink("Join city", "JoinCity")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Identification)
+        </th>
+
+        <th></th>
+
+
+    </tr>
+
+    @foreach (var item in ViewBag.GetSickCity)
+    {
+        <tr>
+            <td>
+                @item[0]
+            </td>
+            <td>
+                @item[1]
+            </td>
+            <td>
+                @item[2]
+            </td>
+            <td>
+                @item[3]
+            </td>
+
+        </tr>
+    }
+</table>
+

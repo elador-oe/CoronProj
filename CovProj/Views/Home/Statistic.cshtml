@@ -1,20 +1,134 @@
 ﻿@model IEnumerable<CovProj.Models.Peoples>
-@{
-    ViewBag.Title = "Statistics";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-    List<string[]> SickList = ViewBag.GetSickPeoples;
-}
+    @{
+        ViewBag.Title = "Statistics";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+        List<string[]> SickList = ViewBag.GetSickPeoples;
+    }
+        @*<!DOCTYPE HTML>
+    <html>
+    <head>
+    <script>
+    window.onload = function() {
 
-@*@section Header{
-    <header class="major">*@
-<h2>User Statistics</h2>
-@*</header>
-    }*@
-<p>
-    @Html.ActionLink("Create New", "JoinSick")
-</p>
+    var dataPoints = [];
 
+    var options = {
+        theme: "light2",
+        title: {
+            text: "Live Data"
+        },
+        data: [{
+            type: "line",
+            dataPoints: dataPoints
+        }]
+    };
+    $("#chartContainer").CanvasJSChart(options);
+    updateData();
 
+    // Initial Values
+    var xValue = 0;
+    var yValue = 10;
+    var newDataCount = 6;
+
+    function addData(data) {
+        if(newDataCount != 1) {
+            $.each(data, function(key, value) {
+                dataPoints.push({x: value[0], y: parseInt(value[1])});
+                xValue++;
+                yValue = parseInt(value[1]);
+            });
+        } else {
+            //dataPoints.shift();
+            dataPoints.push({x: data[0][0], y: parseInt(data[0][1])});
+            xValue++;
+            yValue = parseInt(data[0][1]);
+        }
+
+        newDataCount = 1;
+
+        $("#chartContainer").CanvasJSChart().render()
+        setTimeout(updateData, 1500);
+    }
+
+    function updateData() {
+        $.getJSON("https://canvasjs.com/services/data/datapoints.php?xstart="+xValue+"&ystart="+yValue+"&length="+newDataCount+"&type=json", addData);
+    }
+
+    }
+    </script>
+    </head>
+    <body>
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    </body>
+    </html>
+    @section Header{
+        <header class="major">
+    <h2>User Statistics</h2>
+    </header>
+        }
+    <p>
+        @Html.ActionLink("Create New", "JoinSick")
+    </p>
+    <style>
+        window.onload = function() {
+            var dataPoints = [];
+            var options =
+
+        {
+            theme: "light2", title:
+
+        {
+            text: "Live Data"
+        }
+
+        ,
+        data: [ {
+            type: "line", dataPoints: dataPoints
+        }
+
+        ]
+        }
+
+        ;
+        $("#chartContainer").CanvasJSChart(options);
+        updateData();
+
+        // Initial Values
+        var xValue = 0;
+        var yValue = 10;
+        var newDataCount = 6;
+
+        function addData(data) {
+            if(newDataCount != 1)
+
+        {
+            $.each(data, function(key, value) {
+                dataPoints.push({x: value[0], y: parseInt(value[1])});
+                xValue++;
+                yValue = parseInt(value[1]);
+            });
+        }
+
+        else {
+            //dataPoints.shift();
+            dataPoints .push({x: data[0][0], y: parseInt(data[0][1])});
+            xValue ++;
+            yValue = parseInt(data[0][1]);
+        }
+
+        newDataCount = 1;
+
+        $("#chartContainer").CanvasJSChart().render()
+        setTimeout(updateData, 1500);
+        }
+
+        function updateData() {
+            $.getJSON("https://canvasjs.com/services/data/datapoints.php?xstart="+xValue+"&ystart="+yValue+"&length="+newDataCount+"&type=json", addData);
+        }
+
+    </style>
     <div>
         <table class="table">
             <tr>
@@ -30,7 +144,7 @@
                 </th>
             </tr>
 
-            @foreach (var item in SickList)
+            @foreach (var item in ViewBag.GetSickPeoples)
             {
                 <tr>
                     <td>
@@ -63,24 +177,22 @@
                 </th>
             </tr>
 
-            @*@foreach (var item in HealthyList)
-                {
-                    <tr>
-                        <td>
-                            @item[0]
-                        </td>
+    @foreach (var item in HealthyList)
+        {
+            <tr>
+                <td>
+                    @item[0]
+                </td>
+            
+                <td>
+                    @item[1]
+                </td>
 
-                        <td>
-                            @item[1]
-                        </td>
+                <td>
+                    @item[2]
+                </td>
+            </tr>
+        }
 
-                        <td>
-                            @item[2]
-                        </td>
-                    </tr>
-                }*@
-
-        </table>
-    </div>
-
-
+            </table>
+        </div>*@

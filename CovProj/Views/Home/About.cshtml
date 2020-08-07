@@ -3,11 +3,10 @@
     ViewBag.Title = "About";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-    <h2>What is coronavirus (COVID-19)?</h2>
+<h2>What is coronavirus (COVID-19)?</h2>
 
 <style>
-   /* aside {
+    /* aside {
         width: 40%;
         padding-left: .5rem;
         margin-left: .5rem;
@@ -24,11 +23,16 @@
     p {
         font-family: 'Fira Sans', sans-serif;
     }*/
+  
     .newspaper {
         column-count: 3;
         column-gap: 40px;
         font-family: 'Fira Sans', sans-serif;
+        margin-top 66px;
+        padding 44px;
+        background: "clouds.jpeg";
     }
+    
 </style>
 <header>
     Coronaviruses are a large family of viruses that cause respiratory infections. These can range from the common cold to more serious diseases.
@@ -68,6 +72,21 @@
     @*</p>
         <br />*@
 </div>
+<body>
+
+    @*<canvas width="1000" height="600" id="clouds"></canvas>
+    <script>
+        var canvas = document.getElementById("clouds");
+        var ctx = canvas.getContext("2d");
+
+        ctx.rotate(Math.random() * 2 * Math.PI);
+        ctx.fillStyle = "rgb(200,0,0)";
+        ctx.fillRect(10, 10, 55, 50);
+
+        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+        ctx.fillRect(30, 30, 55, 50);
+    </script>*@
+</body>
 <footer>
     Suspendisse potenti. Sed eu molestie nunc. Proin venenatis consequat risus, vel lobortis ipsum suscipit nec. Praesent a ornare nisl. Nunc ut pretium neque. Suspendisse at suscipit magna. Vestibulum bibendum turpis massa, eget consectetur arcu dignissim sed. Praesent nec justo felis. Nulla facilisi. Fusce porttitor sed urna vitae faucibus. Maecenas nec libero id orci gravida pharetra sit amet ut risus. Proin vitae pretium turpis, vel iaculis neque. Sed scelerisque aliquam lorem vitae porta. Ut interdum vulputate quam sit amet eleifend. Pellentesque rutrum orci eget metus pharetra bibendum.
 </footer>
