@@ -45,7 +45,7 @@ namespace CovProj.Controllers
             if (loggedUser == null)
             {
                
-                ModelState.AddModelError("", "Wrong credentials plese registrate");
+                ModelState.AddModelError("", "Wrong credentials please registrate");
                 Session["login"] = "true";
 
                 return RedirectToAction("Login");
